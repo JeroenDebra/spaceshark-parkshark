@@ -6,21 +6,19 @@
         <artifactId>parkshark</artifactId>
         <groupId>com.switchfully.spaceshark</groupId>
         <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>application</artifactId>
 
-    <properties>
-        <maven.compiler.source>15</maven.compiler.source>
-        <maven.compiler.target>15</maven.compiler.target>
-    </properties>
 
     <dependencies>
         <dependency>
-            <groupId>com.switchfully.jsonbourne</groupId>
+            <groupId>com.switchfully.spaceshark</groupId>
             <artifactId>api</artifactId>
         </dependency>
+
     </dependencies>
 
     <build>
