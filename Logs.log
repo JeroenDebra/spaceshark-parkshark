@@ -1818,3 +1818,31 @@ org.postgresql.util.PSQLException: ERROR: relation "hibernate_sequence" does not
 2021-04-20 11:16:14.661  INFO 1228 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2021-04-20 11:16:14.661  INFO 1228 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2021-04-20 11:16:14.667  INFO 1228 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2021-04-20 14:35:54.900  INFO 16512 --- [main] c.s.spaceshark.ParksharkApplication      : Starting ParksharkApplication using Java 15.0.2 on DESKTOP-3LQVDCG with PID 16512 (C:\Users\pelin\IdeaProjects\spaceshark-parkshark\application\target\classes started by pelin in C:\Users\pelin\IdeaProjects\spaceshark-parkshark)
+2021-04-20 14:35:54.903 DEBUG 16512 --- [main] c.s.spaceshark.ParksharkApplication      : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-04-20 14:35:54.904  INFO 16512 --- [main] c.s.spaceshark.ParksharkApplication      : No active profile set, falling back to default profiles: default
+2021-04-20 14:35:55.832  INFO 16512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-20 14:35:55.908  INFO 16512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 2 JPA repository interfaces.
+2021-04-20 14:35:56.556  INFO 16512 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-20 14:35:56.565  INFO 16512 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-20 14:35:56.566  INFO 16512 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-20 14:35:56.676  INFO 16512 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-20 14:35:56.676  INFO 16512 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1720 ms
+2021-04-20 14:35:56.850  INFO 16512 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-04-20 14:35:56.867  INFO 16512 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-20 14:35:57.585  INFO 16512 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-20 14:35:57.673  INFO 16512 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://database-2.cuvv0osxzgmi.eu-west-3.rds.amazonaws.com:5432/jeroen (PostgreSQL 12.5)
+2021-04-20 14:35:58.148  INFO 16512 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.165s)
+2021-04-20 14:35:58.398  INFO 16512 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "parkshark-test": 2
+2021-04-20 14:35:58.399  WARN 16512 --- [main] o.f.core.internal.command.DbMigrate      : Schema "parkshark-test" has a version (2) that is newer than the latest available migration (1) !
+2021-04-20 14:35:58.426  INFO 16512 --- [main] o.f.core.internal.command.DbMigrate      : Schema "parkshark-test" is up to date. No migration necessary.
+2021-04-20 14:35:58.636  INFO 16512 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-20 14:35:58.699  INFO 16512 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-04-20 14:35:58.876  INFO 16512 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-20 14:35:59.027  INFO 16512 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-04-20 14:35:59.979  INFO 16512 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-20 14:35:59.993  INFO 16512 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-20 14:36:00.398  WARN 16512 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-20 14:36:00.470  INFO 16512 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-20 14:36:01.301  INFO 16512 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-20 14:36:01.311  INFO 16512 --- [main] c.s.spaceshark.ParksharkApplication      : Started ParksharkApplication in 7.496 seconds (JVM running for 9.801)
