@@ -1,5 +1,7 @@
 package com.switchfully.spaceshark.model;
 
+import com.switchfully.spaceshark.utils.ValidationUtil;
+
 import javax.persistence.*;
 
 @Entity
@@ -17,6 +19,8 @@ public class Director {
     }
 
     public Director(String firstname, String lastname) {
+        ValidationUtil.throwExceptionIfNullOrEmptyOrBlank(firstname, "director firstname");
+        ValidationUtil.throwExceptionIfNullOrEmptyOrBlank(lastname, "director lastname");
         this.firstname = firstname;
         this.lastname = lastname;
     }
