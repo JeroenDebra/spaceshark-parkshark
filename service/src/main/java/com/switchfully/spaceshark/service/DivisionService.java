@@ -19,11 +19,6 @@ public class DivisionService {
     }
 
     public Division save(Division division){
-
-        Director director = new Director(division.getDirector().getFirstname(),division.getDirector().getLastname());
-        directorRepository.save(director);
-
-        division.setDirector(director);
         divisionRepository.save(division);
         return division;
     }
