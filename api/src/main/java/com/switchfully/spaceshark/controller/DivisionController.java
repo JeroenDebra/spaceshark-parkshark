@@ -26,10 +26,11 @@ public class DivisionController {
         this.divisionMapper = divisionMapper;
     }
 
-    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = "application/json")
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
     public DivisionDTO createDivision(@RequestBody CreateDivisionDTO createDivisionDTO){
         Division division = divisionService.save(divisionMapper.toDivision(createDivisionDTO));
+        logger.info("Division is added: " + division);
         return divisionMapper.toDTO(division);
     }
 
