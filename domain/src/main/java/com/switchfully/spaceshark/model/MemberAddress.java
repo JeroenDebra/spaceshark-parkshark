@@ -2,13 +2,15 @@ package com.switchfully.spaceshark.model;
 
 import com.switchfully.spaceshark.utils.ValidationUtil;
 
-import javax.persistence.Embeddable;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "member_addresses")
 public class MemberAddress {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
     private String street;
     private String houseNumber;
