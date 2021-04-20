@@ -1,0 +1,12 @@
+SET SCHEMA 'parkshark-test';
+
+CREATE TABLE members(
+    id serial NOT NULL PRIMARY KEY,
+    firstname varchar(25) NOT NULL,
+    lastname varchar(25) NOT NULL,
+    phone_number varchar(25) NOT NULL,
+    email varchar NOT NULL,
+    licence_plate varchar(25) NOT NULL,
+    registration_date date NOT NULL
+    FOREIGN KEY memberAddress
+)
