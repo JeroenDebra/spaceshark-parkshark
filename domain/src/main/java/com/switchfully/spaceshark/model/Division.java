@@ -1,5 +1,7 @@
 package com.switchfully.spaceshark.model;
 
+import com.switchfully.spaceshark.utils.ValidationUtil;
+
 import javax.persistence.*;
 
 @Entity
@@ -23,14 +25,12 @@ public class Division {
     }
 
     public Division( String name, String originalName, Director director) {
+        ValidationUtil.throwExceptionIfNullOrEmptyOrBlank(name, "division name");
+        ValidationUtil.throwExceptionIfNullOrEmptyOrBlank(originalName, "division original name");
+        ValidationUtil.throwExceptionIfNullObject(director, "director object");
         this.name = name;
         this.originalName = originalName;
         this.director = director;
-    }
-
-    public Division(String name, String originalName) {
-        this.name = name;
-        this.originalName = originalName;
     }
 
     public int getId() {

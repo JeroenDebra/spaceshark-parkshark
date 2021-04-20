@@ -47,4 +47,38 @@ class DivisionControllerTest {
         assertEquals(responseEntity.getBody().getName(), divisionMapper.toDTO(divisionMapper.toDivision(createDivisionDTO)).getName());
     }
 
+    @Test
+    void givenInvalidInput_whenCreatingDivision_thenReturnBadRequest() {
+        CreateDivisionDTO createDivisionDTO = new CreateDivisionDTO();
+        createDivisionDTO.setName(null);
+        createDivisionDTO.setOriginalName("originalName");
+        createDivisionDTO.setDirector_firstname("firstName");
+        createDivisionDTO.setDirector_lastname("lastName");
+
+        ResponseEntity<DivisionDTO> responseEntity = this.testRestTemplate
+                .postForEntity("http://localhost:" + port + "/divisions", createDivisionDTO, DivisionDTO.class);
+
+        assertEquals(HttpStatus.BAD_REQUEST, responseEntity.getStatusCode());
+    }
+
+    @Test
+    void testGetAllDivisions() {
+        CreateDivisionDTO createDivisionDTO = new CreateDivisionDTO();
+        createDivisionDTO.setName("name");
+        createDivisionDTO.setOriginalName("originalName");
+        createDivisionDTO.setDirector_firstname("firstName");
+        createDivisionDTO.setDirector_lastname("lastName");
+
+        int sizeBeforeAdding = divisionService.getAllDivisions().size();
+
+        divisionService.save(divisionMapper.toDivision(createDivisionDTO));
+
+        ResponseEntity<DivisionDTO[]> responseEntity = this.testRestTemplate
+                .getForEntity("http://localhost:" + port + "/divisions", DivisionDTO[].class);
+
+        assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
+        assertEquals(sizeBeforeAdding + 1, divisionService.getAllDivisions().size());
+        assertEquals(divisionService.getAllDivisions().size(), responseEntity.getBody().length);
+    }
+
 }

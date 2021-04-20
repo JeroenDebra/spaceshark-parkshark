@@ -12,6 +12,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping(path = "/divisions")
 public class DivisionController {
@@ -32,6 +34,13 @@ public class DivisionController {
         Division division = divisionService.save(divisionMapper.toDivision(createDivisionDTO));
         logger.info("Division is added: " + division);
         return divisionMapper.toDTO(division);
+    }
+
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.OK)
+    public List<DivisionDTO> getAllDivisions() {
+        logger.info("Getting all divisions");
+        return divisionMapper.toDTOList(divisionService.getAllDivisions());
     }
 
 }

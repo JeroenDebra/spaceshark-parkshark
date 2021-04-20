@@ -6,6 +6,9 @@ import com.switchfully.spaceshark.model.Director;
 import com.switchfully.spaceshark.model.Division;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Component
 public class DivisionMapper {
 
@@ -24,5 +27,7 @@ public class DivisionMapper {
     }
 
 
-
+    public List<DivisionDTO> toDTOList(List<Division> allDivisions) {
+        return allDivisions.stream().map(this::toDTO).collect(Collectors.toList());
+    }
 }
