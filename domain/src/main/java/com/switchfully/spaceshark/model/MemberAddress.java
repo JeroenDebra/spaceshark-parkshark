@@ -2,14 +2,20 @@ package com.switchfully.spaceshark.model;
 
 import com.switchfully.spaceshark.utils.ValidationUtil;
 
-public class Address {
+import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "member_addresses")
+public class MemberAddress {
 
     private String street;
     private String houseNumber;
     private String postcode;
     private String city;
 
-    public Address(String street, String houseNumber, String postcode, String city) {
+    public MemberAddress(String street, String houseNumber, String postcode, String city) {
         ValidationUtil.throwExceptionIfNullOrEmptyOrBlank(street, "street");
         ValidationUtil.throwExceptionIfNullOrEmptyOrBlank(houseNumber, "house number");
         ValidationUtil.throwExceptionIfNullOrEmptyOrBlank(postcode, "postcode");
@@ -20,7 +26,7 @@ public class Address {
         this.city = city;
     }
 
-    public Address() {
+    public MemberAddress() {
     }
 
     public String getStreet() {
