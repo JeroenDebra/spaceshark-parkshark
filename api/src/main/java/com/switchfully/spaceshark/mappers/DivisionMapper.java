@@ -1,8 +1,8 @@
-package com.switchfully.spaceshark.mapper;
+package com.switchfully.spaceshark.mappers;
 
-import com.switchfully.spaceshark.dto.CreateDivisionDTO;
-import com.switchfully.spaceshark.dto.DivisionDTO;
-import com.switchfully.spaceshark.model.Director;
+import com.switchfully.spaceshark.dtos.CreateDivisionDTO;
+import com.switchfully.spaceshark.dtos.DivisionDTO;
+import com.switchfully.spaceshark.model.people.Director;
 import com.switchfully.spaceshark.model.Division;
 import org.springframework.stereotype.Component;
 

@@ -2916,8 +2916,8 @@ Caused by: java.net.SocketException: Connection reset
 java.lang.IllegalArgumentException: division name cannot be null.
 	at com.switchfully.spaceshark.utils.ValidationUtil.throwExceptionIfNullOrEmptyOrBlank(ValidationUtil.java:25) ~[classes/:na]
 	at com.switchfully.spaceshark.model.Division.<init>(Division.java:28) ~[classes/:na]
-	at com.switchfully.spaceshark.mapper.DivisionMapper.toDivision(DivisionMapper.java:14) ~[classes/:na]
-	at com.switchfully.spaceshark.controller.DivisionController.createDivision(DivisionController.java:32) ~[classes/:na]
+	at com.switchfully.spaceshark.mappers.DivisionMapper.toDivision(DivisionMapper.java:14) ~[classes/:na]
+	at com.switchfully.spaceshark.controllers.DivisionController.createDivision(DivisionController.java:32) ~[classes/:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]

@@ -1,7 +1,8 @@
-package com.switchfully.spaceshark.model.address;
+package com.switchfully.spaceshark.model.addresses;
+
+import com.switchfully.spaceshark.utils.ValidationUtil;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
 @Table(name = "postal_code")
@@ -17,9 +18,15 @@ public class PostalCode {
     @Column(name = "city")
     private String city;
 
-//    @OneToMany(mappedBy="address")
-//    private Set<Address> addressSet;
+    public PostalCode() {
+    }
 
+    public PostalCode(String postalCode, String city) {
+        ValidationUtil.throwExceptionIfNullOrEmptyOrBlank(postalCode, "postal code");
+        ValidationUtil.throwExceptionIfNullOrEmptyOrBlank(city, "city");
+        this.postalCode = postalCode;
+        this.city = city;
+    }
 
     public int getId() {
         return id;
@@ -34,6 +41,7 @@ public class PostalCode {
     }
 
     public void setPostalCode(String postalCode) {
+        ValidationUtil.throwExceptionIfNullOrEmptyOrBlank(postalCode, "postal code");
         this.postalCode = postalCode;
     }
 
@@ -42,6 +50,7 @@ public class PostalCode {
     }
 
     public void setCity(String city) {
+        ValidationUtil.throwExceptionIfNullOrEmptyOrBlank(city, "city");
         this.city = city;
     }
 }

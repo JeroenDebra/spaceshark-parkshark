@@ -1,4 +1,4 @@
-package com.switchfully.spaceshark.dto;
+package com.switchfully.spaceshark.dtos;
 
 public class CreateParkinglotDTO {
 

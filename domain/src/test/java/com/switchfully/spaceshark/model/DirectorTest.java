@@ -1,9 +1,8 @@
 package com.switchfully.spaceshark.model;
 
+import com.switchfully.spaceshark.model.people.Director;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class DirectorTest {
 

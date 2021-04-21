@@ -1,5 +1,6 @@
-package com.switchfully.spaceshark.model;
+package com.switchfully.spaceshark.model.people;
 
+import com.switchfully.spaceshark.model.addresses.Address;
 import com.switchfully.spaceshark.utils.ValidationUtil;
 
 import javax.persistence.*;
@@ -21,7 +22,7 @@ public class Member {
 
     @OneToOne
     @JoinColumn(name = "member_address")
-    private MemberAddress memberAddress;
+    private Address memberAddress;
 
     @Column(name = "phone_number")
     private String phoneNumber;
@@ -35,7 +36,7 @@ public class Member {
     @Column(name = "registration_date")
     private LocalDate registrationDate;
 
-    public Member(String firstName, String lastName, MemberAddress memberAddress, String phoneNumber, String email, String licencePlate) {
+    public Member(String firstName, String lastName, Address memberAddress, String phoneNumber, String email, String licencePlate) {
         ValidationUtil.throwExceptionIfNullOrEmptyOrBlank(firstName, "member firstname");
         ValidationUtil.throwExceptionIfNullOrEmptyOrBlank(lastName, "member lastname");
         ValidationUtil.throwExceptionIfNullOrEmptyOrBlank(licencePlate, "member licence plate");
@@ -71,11 +72,11 @@ public class Member {
         this.lastName = lastName;
     }
 
-    public MemberAddress getAddress() {
+    public Address getAddress() {
         return memberAddress;
     }
 
-    public void setAddress(MemberAddress memberAddress) {
+    public void setAddress(Address memberAddress) {
         this.memberAddress = memberAddress;
     }
 

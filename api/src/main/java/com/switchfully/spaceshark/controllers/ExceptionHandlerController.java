@@ -1,4 +1,4 @@
-package com.switchfully.spaceshark.controller;
+package com.switchfully.spaceshark.controllers;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

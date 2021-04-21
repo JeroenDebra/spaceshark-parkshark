@@ -1,4 +1,4 @@
-package com.switchfully.spaceshark.model;
+package com.switchfully.spaceshark.model.people;
 
 import com.switchfully.spaceshark.utils.ValidationUtil;
 

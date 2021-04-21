@@ -1,11 +1,10 @@
-package com.switchfully.spaceshark.controller;
+package com.switchfully.spaceshark.controllers;
 
-import com.switchfully.spaceshark.dto.CreateDivisionDTO;
-import com.switchfully.spaceshark.dto.DivisionDTO;
-import com.switchfully.spaceshark.mapper.DivisionMapper;
+import com.switchfully.spaceshark.dtos.CreateDivisionDTO;
+import com.switchfully.spaceshark.dtos.DivisionDTO;
+import com.switchfully.spaceshark.mappers.DivisionMapper;
 import com.switchfully.spaceshark.model.Division;
-import com.switchfully.spaceshark.service.DivisionService;
-import org.apache.tomcat.util.json.JSONParser;
+import com.switchfully.spaceshark.services.DivisionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;

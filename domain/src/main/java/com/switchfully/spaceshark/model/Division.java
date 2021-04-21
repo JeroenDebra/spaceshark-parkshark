@@ -1,5 +1,6 @@
 package com.switchfully.spaceshark.model;
 
+import com.switchfully.spaceshark.model.people.Director;
 import com.switchfully.spaceshark.utils.ValidationUtil;
 
 import javax.persistence.*;

@@ -1,4 +1,6 @@
-package com.switchfully.spaceshark.model.address;
+package com.switchfully.spaceshark.model.addresses;
+
+import com.switchfully.spaceshark.utils.ValidationUtil;
 
 import javax.persistence.*;
 
@@ -20,6 +22,18 @@ public class Address {
     @JoinColumn( name = "postal_code_id")
     private PostalCode postalCode;
 
+    public Address() {
+    }
+
+    public Address(String streetName, String streetNumber, PostalCode postalCode) {
+        ValidationUtil.throwExceptionIfNullOrEmptyOrBlank(streetName, "street");
+        ValidationUtil.throwExceptionIfNullOrEmptyOrBlank(streetNumber, "street number");
+        ValidationUtil.throwExceptionIfNullObject(postalCode, "postal code");
+        this.streetName = streetName;
+        this.streetNumber = streetNumber;
+        this.postalCode = postalCode;
+    }
+
     public int getId() {
         return id;
     }
@@ -33,6 +47,7 @@ public class Address {
     }
 
     public void setStreetName(String streetName) {
+        ValidationUtil.throwExceptionIfNullOrEmptyOrBlank(streetName, "street");
         this.streetName = streetName;
     }
 
@@ -41,6 +56,7 @@ public class Address {
     }
 
     public void setStreetNumber(String streetNumber) {
+        ValidationUtil.throwExceptionIfNullOrEmptyOrBlank(streetNumber, "house number");
         this.streetNumber = streetNumber;
     }
 
