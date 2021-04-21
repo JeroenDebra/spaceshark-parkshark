@@ -83,4 +83,36 @@ class MemberControllerTest {
 
         assertEquals(HttpStatus.BAD_REQUEST, responseEntity.getStatusCode());
     }
+
+    @Test
+    void testGetAllMembers() {
+        CreateMemberDto createMemberDto = new CreateMemberDto();
+        CreateAddressDTO createAddressDTO = new CreateAddressDTO();
+        CreatePostalCodeDTO createPostalCodeDTO = new CreatePostalCodeDTO();
+
+        createPostalCodeDTO.setPostalCode("1234");
+        createPostalCodeDTO.setCity("Leuven");
+
+        createAddressDTO.setStreetName("street");
+        createAddressDTO.setStreetNumber("12A");
+        createAddressDTO.setPostalCodeDTO(createPostalCodeDTO);
+
+        createMemberDto.setFirstName("first name")
+                .setLastName("name")
+                .setEmail("first@last.com")
+                .setLicencePlate("12 FD 457")
+                .setPhoneNumber("+32045824684")
+                .setAddress(createAddressDTO);
+
+        int sizeBeforeAdding = memberService.getAllMembers().size();
+
+        memberService.save(memberMapper.createMemberDtoToMember(createMemberDto));
+
+        ResponseEntity<OverviewMemberDTO[]> responseEntity = this.testRestTemplate
+                .getForEntity("http://localhost:" + port + "/members", OverviewMemberDTO[].class);
+
+        assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
+        assertEquals(sizeBeforeAdding + 1, memberService.getAllMembers().size());
+        assertEquals(memberService.getAllMembers().size(), responseEntity.getBody().length);
+        }
 }
