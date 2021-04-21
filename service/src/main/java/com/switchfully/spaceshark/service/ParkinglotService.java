@@ -19,11 +19,7 @@ public class ParkinglotService {
         this.addressService = addressService;
     }
 
-    public void save(Parkinglot parkinglot, int addressId, int contactPersonId) {
-        Address address = addressService.addressFindById(addressId);
-        ContactPerson contactPerson = contactPersonService.contactPersonFindById(contactPersonId);
-        parkinglot.setAddress(address);
-        parkinglot.setContactPerson(contactPerson);
+    public void save(Parkinglot parkinglot) {
         parkinglotRepository.save(parkinglot);
     }
 }
