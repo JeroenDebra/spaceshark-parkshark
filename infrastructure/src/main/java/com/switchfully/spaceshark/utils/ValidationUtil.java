@@ -41,7 +41,9 @@ final public class ValidationUtil {
 
     public static void throwExceptionIfPhoneNumberNullEmptyBlankOrInvalid(String phonenumber, String phone){
         throwExceptionIfNullOrEmptyOrBlank(phonenumber, phone);
-        if(!isValidPhoneNumber(phonenumber)) throw new IllegalArgumentException(phonenumber + "Invalid phonenumber.");
+        if(!isValidPhoneNumber(phonenumber)) {
+            throw new IllegalArgumentException(phonenumber + "Invalid phonenumber.");
+        }
     }
 
     public static void throwExceptionIfNullOrEmptyOrBlank(Object object, String objectName) {

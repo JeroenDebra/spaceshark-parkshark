@@ -7,7 +7,7 @@ public class CreateParkinglotDTO {
     private String name;
     private int maxCapacity;
     private String category;
-    private AddressDTO address;
+    private CreateAddressDTO address;
     private ContactPersonDTO contactPerson;
     private BigDecimal pricePerHour;
     private String currency;
@@ -37,11 +37,11 @@ public class CreateParkinglotDTO {
         this.category = category;
     }
 
-    public AddressDTO getAddress() {
+    public CreateAddressDTO getAddress() {
         return address;
     }
 
-    public void setAddress(AddressDTO address) {
+    public void setAddress(CreateAddressDTO address) {
         this.address = address;
     }
 

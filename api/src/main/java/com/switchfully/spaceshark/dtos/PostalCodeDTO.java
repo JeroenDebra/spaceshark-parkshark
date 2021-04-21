@@ -2,6 +2,7 @@ package com.switchfully.spaceshark.dtos;
 
 public class PostalCodeDTO {
 
+    private int id;
     private String postalCode;
     private String city;
 
@@ -12,15 +13,26 @@ public class PostalCodeDTO {
         return postalCode;
     }
 
-    public void setPostalCode(String postalCode) {
+    public PostalCodeDTO setPostalCode(String postalCode) {
         this.postalCode = postalCode;
+        return this;
     }
 
     public String getCity() {
         return city;
     }
 
-    public void setCity(String city) {
+    public PostalCodeDTO setCity(String city) {
         this.city = city;
+        return this;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public PostalCodeDTO setId(int id) {
+        this.id = id;
+        return this;
     }
 }
