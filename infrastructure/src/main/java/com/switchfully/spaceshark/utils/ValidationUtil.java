@@ -53,4 +53,9 @@ final public class ValidationUtil {
             throw new IllegalArgumentException(objectName + " cannot be empty.");
     }
 
+    public static boolean isGsmPhoneValidNumber(String gsmOrPhone) {
+        return isValidPhoneNumber(gsmOrPhone) && !isNull(gsmOrPhone) && !isBlankString(gsmOrPhone);
+    }
+
+
 }

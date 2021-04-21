@@ -1,6 +1,7 @@
 package com.switchfully.spaceshark.mappers;
 
 import com.switchfully.spaceshark.dtos.CreateParkinglotDTO;
+import com.switchfully.spaceshark.model.Price;
 import com.switchfully.spaceshark.model.addresses.Address;
 import com.switchfully.spaceshark.model.addresses.PostalCode;
 import com.switchfully.spaceshark.model.parkingLot.Parkinglot;
@@ -15,8 +16,10 @@ public class ParkinglotMapper {
         Parkinglot parkinglot = new Parkinglot(createParkinglotDTO.getName(),
                 createParkinglotDTO.getCategory(),
                 createParkinglotDTO.getMaxCapacity(),
+                toPrice(createParkinglotDTO),
                 toContactPerson(createParkinglotDTO),
-                toAddress(createParkinglotDTO));
+                toAddress(createParkinglotDTO))
+        ;
 
         return parkinglot;
     }
@@ -33,6 +36,10 @@ public class ParkinglotMapper {
                 createParkinglotDTO.getContactPerson().getGsm(),
                 createParkinglotDTO.getContactPerson().getPhoneNumber(),
                 createParkinglotDTO.getContactPerson().getEmail());
+    }
+
+    public Price toPrice(CreateParkinglotDTO createParkinglotDTO){
+        return new Price(createParkinglotDTO.getPricePerHour(), createParkinglotDTO.getCurrency());
     }
 
 }

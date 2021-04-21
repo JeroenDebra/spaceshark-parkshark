@@ -1,5 +1,7 @@
 package com.switchfully.spaceshark.model.people;
 
+import com.switchfully.spaceshark.utils.ValidationUtil;
+
 import javax.persistence.*;
 
 @Entity
@@ -25,10 +27,17 @@ public class ContactPerson {
     private String email;
 
     public ContactPerson(String name, String gsm, String phoneNumber, String email) {
+        if (!ValidationUtil.isValidEmail(email)){
+            throw new IllegalArgumentException("Invalid Email");
+        }
+        hasAtLeastOneValidNumber(gsm, phoneNumber);
         this.name = name;
         this.gsm = gsm;
         this.phoneNumber = phoneNumber;
         this.email = email;
+    }
+
+    public ContactPerson() {
     }
 
     public int getId() {
@@ -52,6 +61,7 @@ public class ContactPerson {
     }
 
     public void setGsm(String gsm) {
+        hasAtLeastOneValidNumber(gsm, phoneNumber);
         this.gsm = gsm;
     }
 
@@ -60,6 +70,7 @@ public class ContactPerson {
     }
 
     public void setPhoneNumber(String phoneNumber) {
+        hasAtLeastOneValidNumber(gsm, phoneNumber);
         this.phoneNumber = phoneNumber;
     }
 
@@ -68,6 +79,22 @@ public class ContactPerson {
     }
 
     public void setEmail(String email) {
+        if (!ValidationUtil.isValidEmail(email)){
+            throw new IllegalArgumentException("Invalid Email");
+        }
         this.email = email;
     }
+
+    private void hasAtLeastOneValidNumber(String gsm, String phone){
+//        if ((gsm == null && phone == null) || (gsm == null && phone.equals("")) || (phone == null && gsm.equals("")) || (gsm.equals("") && phone.equals(""))){
+//            throw new IllegalStateException ("Please provide at least one valid number");
+//        }
+        if (!ValidationUtil.isGsmPhoneValidNumber(gsm) && !ValidationUtil.isGsmPhoneValidNumber(phoneNumber)){
+            throw new IllegalStateException("Please provide at least a valid number");
+        }
+
+    }
+
+
+
 }

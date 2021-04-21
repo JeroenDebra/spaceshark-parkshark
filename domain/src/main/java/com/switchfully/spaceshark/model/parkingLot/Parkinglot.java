@@ -1,5 +1,6 @@
 package com.switchfully.spaceshark.model.parkingLot;
 
+import com.switchfully.spaceshark.model.Price;
 import com.switchfully.spaceshark.model.addresses.Address;
 import com.switchfully.spaceshark.model.people.ContactPerson;
 
@@ -22,6 +23,9 @@ public class Parkinglot {
     @Column (name = "max_capacity")
     private int maxCapacity;
 
+    @Embedded
+    private Price pricePerHour;
+
     @ManyToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name = "contact_person_id")
     private ContactPerson contactPerson;
@@ -30,16 +34,26 @@ public class Parkinglot {
     @JoinColumn(name = "address_id")
     private Address address;
 
-    public Parkinglot(String name, String category, int maxCapacity, ContactPerson contactPerson, Address address) {
+
+    public Parkinglot(String name, String category, int maxCapacity, Price pricePerHour, ContactPerson contactPerson, Address address) {
         this.name = name;
         this.category = category;
         this.maxCapacity = maxCapacity;
+        this.pricePerHour = pricePerHour;
         this.contactPerson = contactPerson;
         this.address = address;
     }
 
     public Parkinglot(){
 
+    }
+
+    public Price getPricePerHour() {
+        return pricePerHour;
+    }
+
+    public void setPricePerHour(Price pricePerHour) {
+        this.pricePerHour = pricePerHour;
     }
 
     public int getId() {
