@@ -1,42 +1,13 @@
-package com.switchfully.spaceshark.model.people;
+package com.switchfully.spaceshark.dtos;
 
-import javax.persistence.*;
+public class ContactPersonDTO {
 
-@Entity
-@Table (name = "contact_person")
-public class ContactPerson {
-
-
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
-    @Column(name = "name")
     private String name;
-
-    @Column(name = "gsm")
     private String gsm;
-
-    @Column(name = "phone_number")
     private String phoneNumber;
-
-    @Column(name = "email")
     private String email;
 
-    public ContactPerson(String name, String gsm, String phoneNumber, String email) {
-        this.name = name;
-        this.gsm = gsm;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public ContactPersonDTO() {
     }
 
     public String getName() {

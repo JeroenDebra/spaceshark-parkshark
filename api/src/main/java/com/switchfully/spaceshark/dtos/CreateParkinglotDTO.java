@@ -5,8 +5,8 @@ public class CreateParkinglotDTO {
     private String name;
     private int maxCapacity;
     private String category;
-    private int addressId;
-    private int contactPersonId;
+    private AddressDTO address;
+    private ContactPersonDTO contactPerson;
 
     public String getName() {
         return name;
@@ -32,19 +32,19 @@ public class CreateParkinglotDTO {
         this.category = category;
     }
 
-    public int getAddressId() {
-        return addressId;
+    public AddressDTO getAddress() {
+        return address;
     }
 
-    public void setAddressId(int addressId) {
-        this.addressId = addressId;
+    public void setAddress(AddressDTO address) {
+        this.address = address;
     }
 
-    public int getContactPersonId() {
-        return contactPersonId;
+    public ContactPersonDTO getContactPerson() {
+        return contactPerson;
     }
 
-    public void setContactPersonId(int contactPersonId) {
-        this.contactPersonId = contactPersonId;
+    public void setContactPerson(ContactPersonDTO contactPerson) {
+        this.contactPerson = contactPerson;
     }
 }

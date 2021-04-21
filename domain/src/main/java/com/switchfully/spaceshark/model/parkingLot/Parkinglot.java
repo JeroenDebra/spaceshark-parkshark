@@ -22,13 +22,25 @@ public class Parkinglot {
     @Column (name = "max_capacity")
     private int maxCapacity;
 
-    @ManyToOne()
+    @ManyToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name = "contact_person_id")
     private ContactPerson contactPerson;
 
-    @ManyToOne()
+    @ManyToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name = "address_id")
     private Address address;
+
+    public Parkinglot(String name, String category, int maxCapacity, ContactPerson contactPerson, Address address) {
+        this.name = name;
+        this.category = category;
+        this.maxCapacity = maxCapacity;
+        this.contactPerson = contactPerson;
+        this.address = address;
+    }
+
+    public Parkinglot(){
+
+    }
 
     public int getId() {
         return id;
@@ -78,13 +90,5 @@ public class Parkinglot {
         this.address = address;
     }
 
-    public Parkinglot(String name, String category, int maxCapacity) {
-        this.name = name;
-        this.category = category;
-        this.maxCapacity = maxCapacity;
-    }
 
-    public Parkinglot(){
-
-    }
 }

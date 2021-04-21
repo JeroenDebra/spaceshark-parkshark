@@ -24,6 +24,6 @@ public class ParkinglotController {
     @ResponseStatus(HttpStatus.CREATED)
     public void createParkinglot(@RequestBody CreateParkinglotDTO createParkinglotDTO) {
         Parkinglot parkinglot = parkinglotMapper.toParkinglot(createParkinglotDTO);
-        parkinglotService.save(parkinglot, createParkinglotDTO.getAddressId(), createParkinglotDTO.getContactPersonId());
+        parkinglotService.save(parkinglot);
     }
 }
