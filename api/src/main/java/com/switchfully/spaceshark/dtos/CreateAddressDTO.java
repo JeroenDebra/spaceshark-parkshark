@@ -1,12 +1,12 @@
 package com.switchfully.spaceshark.dtos;
 
-public class AddressDTO {
+public class CreateAddressDTO {
 
     private String StreetName;
     private String StreetNumber;
-    private PostalCodeDTO postalCode;
+    private CreatePostalCodeDTO postalCode;
 
-    public AddressDTO() {
+    public CreateAddressDTO() {
     }
 
     public String getStreetName() {
@@ -25,12 +25,12 @@ public class AddressDTO {
         StreetNumber = streetNumber;
     }
 
-    public PostalCodeDTO getPostalCodeDTO() {
+    public CreatePostalCodeDTO getPostalCodeDTO() {
         return postalCode;
     }
 
-    public void setPostalCodeDTO(PostalCodeDTO postalCodeDTO) {
-        this.postalCode = postalCodeDTO;
+    public void setPostalCodeDTO(CreatePostalCodeDTO createPostalCodeDTO) {
+        this.postalCode = createPostalCodeDTO;
     }
 
 }

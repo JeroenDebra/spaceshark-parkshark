@@ -111,4 +111,8 @@ public class Member {
     public void setRegistrationDate(LocalDate registrationDate) {
         this.registrationDate = registrationDate;
     }
+
+    public int getId() {
+        return id;
+    }
 }

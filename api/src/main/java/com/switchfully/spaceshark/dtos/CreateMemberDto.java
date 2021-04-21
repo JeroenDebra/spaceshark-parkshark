@@ -1,7 +1,5 @@
 package com.switchfully.spaceshark.dtos;
 
-import java.time.LocalDate;
-
 public class CreateMemberDto {
 
     private String firstName;
@@ -9,7 +7,7 @@ public class CreateMemberDto {
     private String phoneNumber;
     private String email;
     private String licencePlate;
-    private int address_id;
+    private CreateAddressDTO address;
 
     public CreateMemberDto setFirstName(String firstName) {
         this.firstName = firstName;
@@ -36,8 +34,8 @@ public class CreateMemberDto {
         return this;
     }
 
-    public CreateMemberDto setAddress_id(int address_id) {
-        this.address_id = address_id;
+    public CreateMemberDto setAddress(CreateAddressDTO address) {
+        this.address = address;
         return this;
     }
 
@@ -61,7 +59,7 @@ public class CreateMemberDto {
         return licencePlate;
     }
 
-    public int getAddress_id() {
-        return address_id;
+    public CreateAddressDTO getAddress() {
+        return address;
     }
 }

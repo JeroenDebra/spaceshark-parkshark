@@ -1,7 +1,5 @@
 package com.switchfully.spaceshark.dtos;
 
-import com.switchfully.spaceshark.model.addresses.Address;
-
 import java.time.LocalDate;
 
 public class MemberDto {
@@ -13,7 +11,7 @@ public class MemberDto {
     private String email;
     private String licencePlate;
     private LocalDate registrationDate;
-    private int address_id;
+    private AddressDto address;
 
     public MemberDto setId(int id) {
         this.id = id;
@@ -45,13 +43,13 @@ public class MemberDto {
         return this;
     }
 
-    public MemberDto setRegistrationDate() {
-        this.registrationDate = LocalDate.now();
+    public MemberDto setRegistrationDate(LocalDate date) {
+        this.registrationDate = date;
         return this;
     }
 
-    public MemberDto setAddress_id(int address_id) {
-        this.address_id = address_id;
+    public MemberDto setAddress(AddressDto address) {
+        this.address = address;
         return this;
     }
 
@@ -83,7 +81,7 @@ public class MemberDto {
         return registrationDate;
     }
 
-    public int getAddress_id() {
-        return address_id;
+    public AddressDto getAddress() {
+        return address;
     }
 }
