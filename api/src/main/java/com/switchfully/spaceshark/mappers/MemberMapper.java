@@ -8,6 +8,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Component
 public class MemberMapper {
 
@@ -34,7 +37,6 @@ public class MemberMapper {
     public AddressDto addressToAddressDto(Address address){
         return new AddressDto().setStreetName(address.getStreetName()).setStreetNumber(address.getStreetNumber())
                 .setPostalCode(postalCodeToPostalCodeDto(address.getPostalCode())).setId(address.getId());
-
     }
 
     public PostalCodeDTO postalCodeToPostalCodeDto(PostalCode postalDetails){
@@ -43,5 +45,15 @@ public class MemberMapper {
 
     public PostalCode createPostalCodeDtoToPostalCode(CreatePostalCodeDTO createPostalCodeDTO){
         return new PostalCode(createPostalCodeDTO.getPostalCode(), createPostalCodeDTO.getCity());
+    }
+
+    public List<OverviewMemberDTO> toOverviewMemberDtoList(List<Member> allMembers) {
+        return allMembers.stream().map(member -> memberToOverviewMemberDto(member)).collect(Collectors.toList());
+    }
+
+    public OverviewMemberDTO memberToOverviewMemberDto(Member member){
+        return new OverviewMemberDTO().setFirstName(member.getFirstName()).setLastName(member.getLastName())
+                .setEmail(member.getEmail()).setId(member.getId()).setLicencePlate(member.getLicencePlate())
+                .setPhoneNumber(member.getPhoneNumber()).setRegistrationDate(member.getRegistrationDate());
     }
 }

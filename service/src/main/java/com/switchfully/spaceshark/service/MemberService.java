@@ -7,6 +7,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MemberService {
 
@@ -25,5 +27,9 @@ public class MemberService {
         Member memberAdded = memberRepository.save(member);
         logger.info("Creating a Member." + memberAdded);
         return memberAdded;
+    }
+
+    public List<Member> getAllMembers() {
+        return memberRepository.findAll();
     }
 }

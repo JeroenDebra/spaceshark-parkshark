@@ -1,7 +1,9 @@
 package com.switchfully.spaceshark.controllers;
 
 import com.switchfully.spaceshark.dtos.CreateMemberDto;
+import com.switchfully.spaceshark.dtos.DivisionDTO;
 import com.switchfully.spaceshark.dtos.MemberDto;
+import com.switchfully.spaceshark.dtos.OverviewMemberDTO;
 import com.switchfully.spaceshark.mappers.MemberMapper;
 import com.switchfully.spaceshark.model.people.Member;
 import com.switchfully.spaceshark.service.MemberService;
@@ -10,6 +12,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping(path = "/members")
@@ -32,4 +36,12 @@ public class MemberController {
         logger.info("Member is added: " + member);
         return memberMapper.memberToMemberDto(member);
     }
+
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.OK)
+    public List<OverviewMemberDTO> getAllMembers() {
+        logger.info("Getting all members");
+        return memberMapper.toOverviewMemberDtoList(memberService.getAllMembers());
+    }
+
 }
