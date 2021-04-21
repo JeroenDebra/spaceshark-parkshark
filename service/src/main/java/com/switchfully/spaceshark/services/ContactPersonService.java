@@ -1,4 +1,4 @@
-package com.switchfully.spaceshark.services;
+package com.switchfully.spaceshark.service;
 
 import com.switchfully.spaceshark.model.people.ContactPerson;
 import com.switchfully.spaceshark.repositories.ContactPersonRepository;

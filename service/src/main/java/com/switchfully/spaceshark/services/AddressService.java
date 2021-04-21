@@ -1,6 +1,6 @@
-package com.switchfully.spaceshark.services;
+package com.switchfully.spaceshark.service;
 
-import com.switchfully.spaceshark.model.addresses.Address;
+import com.switchfully.spaceshark.model.address.Address;
 import com.switchfully.spaceshark.repositories.AddressRepository;
 import org.springframework.stereotype.Service;
 
