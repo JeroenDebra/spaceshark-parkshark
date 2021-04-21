@@ -1,6 +1,6 @@
-package com.switchfully.spaceshark.mapper;
+package com.switchfully.spaceshark.mappers;
 
-import com.switchfully.spaceshark.dto.CreateParkinglotDTO;
+import com.switchfully.spaceshark.dtos.CreateParkinglotDTO;
 import com.switchfully.spaceshark.model.parkingLot.Parkinglot;
 import org.springframework.stereotype.Component;
 

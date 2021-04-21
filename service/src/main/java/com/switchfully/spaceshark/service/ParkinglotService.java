@@ -1,6 +1,6 @@
 package com.switchfully.spaceshark.service;
 
-import com.switchfully.spaceshark.model.address.Address;
+import com.switchfully.spaceshark.model.addresses.Address;
 import com.switchfully.spaceshark.model.parkingLot.Parkinglot;
 import com.switchfully.spaceshark.model.people.ContactPerson;
 import com.switchfully.spaceshark.repositories.ParkinglotRepository;

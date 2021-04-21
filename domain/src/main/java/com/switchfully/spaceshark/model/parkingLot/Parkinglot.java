@@ -1,6 +1,6 @@
 package com.switchfully.spaceshark.model.parkingLot;
 
-import com.switchfully.spaceshark.model.address.Address;
+import com.switchfully.spaceshark.model.addresses.Address;
 import com.switchfully.spaceshark.model.people.ContactPerson;
 
 import javax.persistence.*;

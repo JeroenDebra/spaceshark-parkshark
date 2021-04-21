@@ -3,7 +3,7 @@ package com.switchfully.spaceshark;
 import com.switchfully.spaceshark.dtos.CreateDivisionDTO;
 import com.switchfully.spaceshark.dtos.DivisionDTO;
 import com.switchfully.spaceshark.mappers.DivisionMapper;
-import com.switchfully.spaceshark.services.DivisionService;
+import com.switchfully.spaceshark.service.DivisionService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

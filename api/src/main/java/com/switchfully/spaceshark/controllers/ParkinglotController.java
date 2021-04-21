@@ -1,7 +1,8 @@
-package com.switchfully.spaceshark.controller;
+package com.switchfully.spaceshark.controllers;
 
-import com.switchfully.spaceshark.dto.CreateParkinglotDTO;
-import com.switchfully.spaceshark.mapper.ParkinglotMapper;
+
+import com.switchfully.spaceshark.dtos.CreateParkinglotDTO;
+import com.switchfully.spaceshark.mappers.ParkinglotMapper;
 import com.switchfully.spaceshark.model.parkingLot.Parkinglot;
 import com.switchfully.spaceshark.service.ParkinglotService;
 import org.springframework.http.HttpStatus;

@@ -4,7 +4,7 @@ import com.switchfully.spaceshark.dtos.CreateDivisionDTO;
 import com.switchfully.spaceshark.dtos.DivisionDTO;
 import com.switchfully.spaceshark.mappers.DivisionMapper;
 import com.switchfully.spaceshark.model.Division;
-import com.switchfully.spaceshark.services.DivisionService;
+import com.switchfully.spaceshark.service.DivisionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
