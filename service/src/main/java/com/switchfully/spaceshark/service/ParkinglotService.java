@@ -4,6 +4,8 @@ import com.switchfully.spaceshark.model.parkingLot.Parkinglot;
 import com.switchfully.spaceshark.repositories.ParkinglotRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 import java.util.List;
 
 @Service
@@ -23,4 +25,10 @@ public class ParkinglotService {
     public List<Parkinglot> getAllParkingLots() {
         return parkinglotRepository.findAll();
     }
+
+    public Parkinglot findParkinglotById(int id){
+        Optional<Parkinglot> optionalPakinglot = parkinglotRepository.findById(id);
+        return optionalPakinglot.orElseThrow(() -> new IllegalArgumentException("parkinglot with id " + id + " is not found"));
+    }
+
 }
