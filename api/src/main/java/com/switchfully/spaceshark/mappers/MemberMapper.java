@@ -28,37 +28,50 @@ public class MemberMapper {
     }
 
     public MemberDto memberToMemberDto(Member member) {
-        return new MemberDto().setFirstName(member.getFirstName()).setLastName(member.getLastName()).setAddress(addressToAddressDto(member.getAddress()))
-                .setEmail(member.getEmail()).setId(member.getId()).setLicencePlate(member.getLicencePlate()).setPhoneNumber(member.getPhoneNumber())
+        logger.info("Converting a Member to MemberDTO, return a MemberDTO.");
+        return new MemberDto()
+                .setFirstName(member.getFirstName())
+                .setLastName(member.getLastName())
+                .setAddress(addressToAddressDto(member.getAddress()))
+                .setEmail(member.getEmail())
+                .setId(member.getId())
+                .setLicencePlate(member.getLicencePlate())
+                .setPhoneNumber(member.getPhoneNumber())
                 .setRegistrationDate(member.getRegistrationDate());
     }
 
     public Address createMemberDtoToAddress(CreateMemberDto createMemberDto) {
-        return new Address(createMemberDto.getAddress().getStreetName(),createMemberDto.getAddress().getStreetNumber(),
+        logger.info("Using a CreateMemberDto to get Address, return an Adress.");
+        return new Address(createMemberDto.getAddress().getStreetName(), createMemberDto.getAddress().getStreetNumber(),
                 new PostalCode(createMemberDto.getAddress().getPostalCodeDTO().getPostalCode(),
                         createMemberDto.getAddress().getPostalCodeDTO().getCity()));
     }
 
-    public AddressDto addressToAddressDto(Address address){
+    public AddressDto addressToAddressDto(Address address) {
+        logger.info("Converting an Address to a AddressDto, return an AddressDto.");
         return new AddressDto().setStreetName(address.getStreetName()).setStreetNumber(address.getStreetNumber())
                 .setPostalCode(postalCodeToPostalCodeDto(address.getPostalCode())).setId(address.getId());
     }
 
-    public PostalCodeDTO postalCodeToPostalCodeDto(PostalCode postalDetails){
+    public PostalCodeDTO postalCodeToPostalCodeDto(PostalCode postalDetails) {
+        logger.info("Converting a PostalCode to PostalCodeDto, return a PostalCodeDto.");
         return new PostalCodeDTO().setPostalCode(postalDetails.getPostalCode()).setCity(postalDetails.getCity()).setId(postalDetails.getId());
     }
 
-    public PostalCode createPostalCodeDtoToPostalCode(CreatePostalCodeDTO createPostalCodeDTO){
-        return new PostalCode(createPostalCodeDTO.getPostalCode(), createPostalCodeDTO.getCity());
-    }
-
     public List<OverviewMemberDTO> toOverviewMemberDtoList(List<Member> allMembers) {
+        logger.info("Converting a list of Members to a List of OverviewMemberDtos, return a List of OverviewMemberDtos.");
         return allMembers.stream().map(member -> memberToOverviewMemberDto(member)).collect(Collectors.toList());
     }
 
-    public OverviewMemberDTO memberToOverviewMemberDto(Member member){
-        return new OverviewMemberDTO().setFirstName(member.getFirstName()).setLastName(member.getLastName())
-                .setEmail(member.getEmail()).setId(member.getId()).setLicencePlate(member.getLicencePlate())
-                .setPhoneNumber(member.getPhoneNumber()).setRegistrationDate(member.getRegistrationDate());
+    public OverviewMemberDTO memberToOverviewMemberDto(Member member) {
+        logger.info("Converting a Member to an OverviewMemberDto, return an OverviewMemberDto.");
+        return new OverviewMemberDTO()
+                .setFirstName(member.getFirstName())
+                .setLastName(member.getLastName())
+                .setEmail(member.getEmail())
+                .setId(member.getId())
+                .setLicencePlate(member.getLicencePlate())
+                .setPhoneNumber(member.getPhoneNumber())
+                .setRegistrationDate(member.getRegistrationDate());
     }
 }
