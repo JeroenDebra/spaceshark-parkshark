@@ -1,6 +1,10 @@
 package com.switchfully.spaceshark.controllers;
 
-import com.switchfully.spaceshark.dtos.*;
+import com.switchfully.spaceshark.dtos.addresses.CreateAddressDTO;
+import com.switchfully.spaceshark.dtos.members.CreateMemberDto;
+import com.switchfully.spaceshark.dtos.members.MemberDto;
+import com.switchfully.spaceshark.dtos.members.OverviewMemberDTO;
+import com.switchfully.spaceshark.dtos.postalcodes.CreatePostalCodeDTO;
 import com.switchfully.spaceshark.mappers.MemberMapper;
 import com.switchfully.spaceshark.service.MemberService;
 import org.junit.jupiter.api.Test;

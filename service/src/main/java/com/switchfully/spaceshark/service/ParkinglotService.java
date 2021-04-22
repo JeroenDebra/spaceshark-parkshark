@@ -19,7 +19,7 @@ public class ParkinglotService {
         this.addressService = addressService;
     }
 
-    public void save(Parkinglot parkinglot) {
-        parkinglotRepository.save(parkinglot);
+    public Parkinglot save(Parkinglot parkinglot) {
+        return parkinglotRepository.save(parkinglot);
     }
 }

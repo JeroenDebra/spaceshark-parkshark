@@ -1,6 +1,11 @@
 package com.switchfully.spaceshark.mappers;
 
-import com.switchfully.spaceshark.dtos.*;
+import com.switchfully.spaceshark.dtos.addresses.AddressDto;
+import com.switchfully.spaceshark.dtos.members.CreateMemberDto;
+import com.switchfully.spaceshark.dtos.members.MemberDto;
+import com.switchfully.spaceshark.dtos.members.OverviewMemberDTO;
+import com.switchfully.spaceshark.dtos.postalcodes.CreatePostalCodeDTO;
+import com.switchfully.spaceshark.dtos.postalcodes.PostalCodeDTO;
 import com.switchfully.spaceshark.model.addresses.Address;
 import com.switchfully.spaceshark.model.addresses.PostalCode;
 import com.switchfully.spaceshark.model.people.Member;

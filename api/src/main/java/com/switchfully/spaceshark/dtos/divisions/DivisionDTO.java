@@ -1,4 +1,4 @@
-package com.switchfully.spaceshark.dtos;
+package com.switchfully.spaceshark.dtos.divisions;
 
 public class DivisionDTO {
 

@@ -1,4 +1,7 @@
-package com.switchfully.spaceshark.dtos;
+package com.switchfully.spaceshark.dtos.parkinglots;
+
+import com.switchfully.spaceshark.dtos.addresses.CreateAddressDTO;
+import com.switchfully.spaceshark.dtos.contactpersons.CreateContactPersonDTO;
 
 import java.math.BigDecimal;
 
@@ -8,7 +11,7 @@ public class CreateParkinglotDTO {
     private int maxCapacity;
     private String category;
     private CreateAddressDTO address;
-    private ContactPersonDTO contactPerson;
+    private CreateContactPersonDTO contactPerson;
     private BigDecimal pricePerHour;
     private String currency;
 
@@ -45,11 +48,11 @@ public class CreateParkinglotDTO {
         this.address = address;
     }
 
-    public ContactPersonDTO getContactPerson() {
+    public CreateContactPersonDTO getContactPerson() {
         return contactPerson;
     }
 
-    public void setContactPerson(ContactPersonDTO contactPerson) {
+    public void setContactPerson(CreateContactPersonDTO contactPerson) {
         this.contactPerson = contactPerson;
     }
 

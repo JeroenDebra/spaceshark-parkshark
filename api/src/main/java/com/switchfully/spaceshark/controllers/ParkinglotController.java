@@ -1,16 +1,21 @@
 package com.switchfully.spaceshark.controllers;
 
 
-import com.switchfully.spaceshark.dtos.CreateParkinglotDTO;
+import com.switchfully.spaceshark.dtos.parkinglots.CreateParkinglotDTO;
+import com.switchfully.spaceshark.dtos.parkinglots.ParkinglotDTO;
 import com.switchfully.spaceshark.mappers.ParkinglotMapper;
 import com.switchfully.spaceshark.model.parkingLot.Parkinglot;
 import com.switchfully.spaceshark.service.ParkinglotService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(path = "/parkinglots")
 public class ParkinglotController {
+
+    private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
 
     private final ParkinglotService parkinglotService;
     private final ParkinglotMapper parkinglotMapper;
@@ -22,8 +27,10 @@ public class ParkinglotController {
 
     @PostMapping(consumes = "Application/JSON")
     @ResponseStatus(HttpStatus.CREATED)
-    public void createParkinglot(@RequestBody CreateParkinglotDTO createParkinglotDTO) {
-        Parkinglot parkinglot = parkinglotMapper.toParkinglot(createParkinglotDTO);
-        parkinglotService.save(parkinglot);
+    public ParkinglotDTO createParkinglot(@RequestBody CreateParkinglotDTO createParkinglotDTO) {
+        logger.info("parkinglot is being added: " + createParkinglotDTO);
+        Parkinglot parkinglot = parkinglotService.save(parkinglotMapper.toParkinglot(createParkinglotDTO));
+
+        return parkinglotMapper.toParkinglotDTO(parkinglot);
     }
 }

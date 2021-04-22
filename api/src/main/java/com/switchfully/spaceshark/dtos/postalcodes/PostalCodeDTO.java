@@ -1,4 +1,4 @@
-package com.switchfully.spaceshark.dtos;
+package com.switchfully.spaceshark.dtos.postalcodes;
 
 public class PostalCodeDTO {
 

@@ -18,7 +18,8 @@ public class Parkinglot {
     private String name;
 
     @Column (name = "category")
-    private String category;
+    @Enumerated(EnumType.STRING)
+    private Category category;
 
     @Column (name = "max_capacity")
     private int maxCapacity;
@@ -35,7 +36,7 @@ public class Parkinglot {
     private Address address;
 
 
-    public Parkinglot(String name, String category, int maxCapacity, Price pricePerHour, ContactPerson contactPerson, Address address) {
+    public Parkinglot(String name, Category category, int maxCapacity, Price pricePerHour, ContactPerson contactPerson, Address address) {
         this.name = name;
         this.category = category;
         this.maxCapacity = maxCapacity;
@@ -72,11 +73,11 @@ public class Parkinglot {
         this.name = name;
     }
 
-    public String getCategory() {
+    public Category getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(Category category) {
         this.category = category;
     }
 

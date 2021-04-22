@@ -1,4 +1,6 @@
-package com.switchfully.spaceshark.dtos;
+package com.switchfully.spaceshark.dtos.addresses;
+
+import com.switchfully.spaceshark.dtos.postalcodes.CreatePostalCodeDTO;
 
 public class CreateAddressDTO {
 

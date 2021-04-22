@@ -1,9 +1,8 @@
 package com.switchfully.spaceshark.controllers;
 
-import com.switchfully.spaceshark.dtos.CreateMemberDto;
-import com.switchfully.spaceshark.dtos.DivisionDTO;
-import com.switchfully.spaceshark.dtos.MemberDto;
-import com.switchfully.spaceshark.dtos.OverviewMemberDTO;
+import com.switchfully.spaceshark.dtos.members.CreateMemberDto;
+import com.switchfully.spaceshark.dtos.members.MemberDto;
+import com.switchfully.spaceshark.dtos.members.OverviewMemberDTO;
 import com.switchfully.spaceshark.mappers.MemberMapper;
 import com.switchfully.spaceshark.model.people.Member;
 import com.switchfully.spaceshark.service.MemberService;

@@ -1,7 +1,7 @@
 package com.switchfully.spaceshark.mappers;
 
-import com.switchfully.spaceshark.dtos.CreateDivisionDTO;
-import com.switchfully.spaceshark.dtos.DivisionDTO;
+import com.switchfully.spaceshark.dtos.divisions.CreateDivisionDTO;
+import com.switchfully.spaceshark.dtos.divisions.DivisionDTO;
 import com.switchfully.spaceshark.model.people.Director;
 import com.switchfully.spaceshark.model.Division;
 import org.springframework.stereotype.Component;
@@ -25,7 +25,6 @@ public class DivisionMapper {
                 .setDirectorFirstname(division.getDirector().getFirstname())
                 .setDirectorLastname(division.getDirector().getLastname());
     }
-
 
     public List<DivisionDTO> toDTOList(List<Division> allDivisions) {
         return allDivisions.stream().map(this::toDTO).collect(Collectors.toList());

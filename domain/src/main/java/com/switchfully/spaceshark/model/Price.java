@@ -1,8 +1,13 @@
 package com.switchfully.spaceshark.model;
 
+import com.switchfully.spaceshark.model.parkingLot.Currency;
+
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import java.math.BigDecimal;
+
 
 @Embeddable
 public class Price {
@@ -11,9 +16,10 @@ public class Price {
     private BigDecimal price;
 
     @Column (name = "currency")
-    private String currency;
+    @Enumerated(EnumType.STRING)
+    private Currency currency;
 
-    public Price(BigDecimal price, String currency) {
+    public Price(BigDecimal price, Currency currency) {
         this.price = price;
         this.currency = currency;
     }
@@ -29,11 +35,11 @@ public class Price {
         this.price = price;
     }
 
-    public String getCurrency() {
+    public Currency getCurrency() {
         return currency;
     }
 
-    public void setCurrency(String currency) {
+    public void setCurrency(Currency currency) {
         this.currency = currency;
     }
 }

@@ -1,7 +1,7 @@
 package com.switchfully.spaceshark.controllers;
 
-import com.switchfully.spaceshark.dtos.CreateDivisionDTO;
-import com.switchfully.spaceshark.dtos.DivisionDTO;
+import com.switchfully.spaceshark.dtos.divisions.CreateDivisionDTO;
+import com.switchfully.spaceshark.dtos.divisions.DivisionDTO;
 import com.switchfully.spaceshark.mappers.DivisionMapper;
 import com.switchfully.spaceshark.model.Division;
 import com.switchfully.spaceshark.service.DivisionService;

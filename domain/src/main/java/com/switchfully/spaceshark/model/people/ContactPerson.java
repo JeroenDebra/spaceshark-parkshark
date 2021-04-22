@@ -8,8 +8,6 @@ import javax.persistence.*;
 @Table (name = "contact_person")
 public class ContactPerson {
 
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -85,16 +83,20 @@ public class ContactPerson {
         this.email = email;
     }
 
-    private void hasAtLeastOneValidNumber(String gsm, String phone){
-//        if ((gsm == null && phone == null) || (gsm == null && phone.equals("")) || (phone == null && gsm.equals("")) || (gsm.equals("") && phone.equals(""))){
-//            throw new IllegalStateException ("Please provide at least one valid number");
-//        }
-        if (!ValidationUtil.isGsmPhoneValidNumber(gsm) && !ValidationUtil.isGsmPhoneValidNumber(phoneNumber)){
-            throw new IllegalStateException("Please provide at least a valid number");
+    public void hasAtLeastOneValidNumber(String gsm, String phone){
+        if (gsm == null && phone == null){
+            throw new IllegalStateException("both cellphone and phone number can't be empty, please give atleast 1 valid phone number");
         }
-
+        phoneNumberIsNullOrValid(gsm);
+        phoneNumberIsNullOrValid(phone);
     }
 
-
+    public void phoneNumberIsNullOrValid(String gsmOrPhoneNumber) {
+        if (gsmOrPhoneNumber != null) {
+            if (!ValidationUtil.isGsmPhoneValidNumber(gsmOrPhoneNumber)) {
+                throw new IllegalArgumentException("please provide a valid cell/phonenumber");
+            }
+        }
+    }
 
 }

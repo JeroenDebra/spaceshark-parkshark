@@ -9,8 +9,8 @@ class ContactPersonTest {
 
     String correctEmail = "example@email.com";
     String notCorrectEmail = "exampleemail.com";
-    String correctCelPhoneNumber = "+04555555552345";
-    String correctPhoneNumber = "+1234321342134";
+    String correctCellPhoneNumber = "+0455555555";
+    String correctPhoneNumber = "+016222222";
 
     @Test
     public void givenValidEmail_WhenCreateContactPerson_ThenCreateContactPersonCorrectly() {
@@ -39,24 +39,31 @@ class ContactPersonTest {
 
     @Test
     public void givenCorrectGsmNumberAndPhoneNumberNull_whenCreatingContactPerson_CreatesContactPersonCorrectly(){
-        ContactPerson contactPerson = new ContactPerson("testname",correctCelPhoneNumber,null,correctEmail);
+        ContactPerson contactPerson = new ContactPerson("testname", correctCellPhoneNumber,null,correctEmail);
 
-        assertEquals(correctCelPhoneNumber,contactPerson.getGsm());
+        assertEquals(correctCellPhoneNumber,contactPerson.getGsm());
         assertNull(contactPerson.getPhoneNumber());
     }
 
-//    @Test
-//    public void givenCorrectPhoneNumberAndCellPhoneNumberNull_whenCreatingContactPerson_CreatesContactPersonCorrectly(){
-//        ContactPerson contactPerson = new ContactPerson("testname",null,correctCelPhoneNumber,correctEmail);
-//        assertEquals(correctPhoneNumber,contactPerson.getPhoneNumber());
-//        assertNull(contactPerson.getGsm());
-//    }
-//
-//    @Test
-//    public void givenNullGsmAndNullPhoneNumber_WhenCreatingContactPerson_ThrowIllegalArgumentException(){
-//        assertThrows(IllegalStateException.class,
-//                () -> new ContactPerson("testname",null,null,correctEmail));
-//    }
+    @Test
+    public void givenCorrectPhoneNumberAndCellPhoneNumberNull_whenCreatingContactPerson_CreatesContactPersonCorrectly(){
+        ContactPerson contactPerson = new ContactPerson("testname",null,correctPhoneNumber,correctEmail);
+        assertEquals(correctPhoneNumber,contactPerson.getPhoneNumber());
+        assertNull(contactPerson.getGsm());
+    }
+
+    @Test
+    public void givenNullGsmAndNullPhoneNumber_WhenCreatingContactPerson_ThrowIllegalArgumentException(){
+        assertThrows(IllegalStateException.class,
+                () -> new ContactPerson("testname",null,null,correctEmail));
+    }
+
+    @Test
+    public void Given1CorrectPhoneNumberAnd1IncorrectPhoneNumber_whenCreatingContactPerson_throwsIllegalArgumentException(){
+        assertThrows(IllegalArgumentException.class, () -> new ContactPerson("testName", correctCellPhoneNumber,"01impossiblePhoneNumer",correctEmail));
+    }
+
+
 }
 
 

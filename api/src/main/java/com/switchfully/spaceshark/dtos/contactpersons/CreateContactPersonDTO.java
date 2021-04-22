@@ -1,13 +1,13 @@
-package com.switchfully.spaceshark.dtos;
+package com.switchfully.spaceshark.dtos.contactpersons;
 
-public class ContactPersonDTO {
+public class CreateContactPersonDTO {
 
     private String name;
     private String gsm;
     private String phoneNumber;
     private String email;
 
-    public ContactPersonDTO() {
+    public CreateContactPersonDTO() {
     }
 
     public String getName() {

@@ -1,4 +1,6 @@
-package com.switchfully.spaceshark.dtos;
+package com.switchfully.spaceshark.dtos.members;
+
+import com.switchfully.spaceshark.dtos.addresses.CreateAddressDTO;
 
 public class CreateMemberDto {
 
