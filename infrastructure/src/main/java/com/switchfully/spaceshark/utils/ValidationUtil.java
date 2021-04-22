@@ -58,6 +58,4 @@ final public class ValidationUtil {
     public static boolean isGsmPhoneValidNumber(String gsmOrPhone) {
         return isValidPhoneNumber(gsmOrPhone) && !isNull(gsmOrPhone) && !isBlankString(gsmOrPhone);
     }
-
-
 }

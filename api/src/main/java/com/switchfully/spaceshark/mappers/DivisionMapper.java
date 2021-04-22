@@ -12,12 +12,12 @@ import java.util.stream.Collectors;
 @Component
 public class DivisionMapper {
 
-    public Division toDivision(CreateDivisionDTO createDivisionDTO){
+    public Division createDivisionDTOToDivision(CreateDivisionDTO createDivisionDTO){
         return new Division(createDivisionDTO.getName(),createDivisionDTO.getOriginalName(),
                 new Director(createDivisionDTO.getDirector_firstname(), createDivisionDTO.getDirector_lastname()));
     }
 
-    public DivisionDTO toDTO(Division division){
+    public DivisionDTO divisionToDivisionDTO(Division division){
         return new DivisionDTO()
                 .setId(division.getId())
                 .setName(division.getName())
@@ -26,7 +26,7 @@ public class DivisionMapper {
                 .setDirectorLastname(division.getDirector().getLastname());
     }
 
-    public List<DivisionDTO> toDTOList(List<Division> allDivisions) {
-        return allDivisions.stream().map(this::toDTO).collect(Collectors.toList());
+    public List<DivisionDTO> divisionListToDivisionDTOList(List<Division> allDivisions) {
+        return allDivisions.stream().map(this::divisionToDivisionDTO).collect(Collectors.toList());
     }
 }

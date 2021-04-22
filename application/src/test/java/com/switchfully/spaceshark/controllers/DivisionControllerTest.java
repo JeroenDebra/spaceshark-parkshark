@@ -1,4 +1,4 @@
-package com.switchfully.spaceshark;
+package com.switchfully.spaceshark.controllers;
 
 import com.switchfully.spaceshark.dtos.divisions.CreateDivisionDTO;
 import com.switchfully.spaceshark.dtos.divisions.DivisionDTO;
@@ -44,7 +44,7 @@ class DivisionControllerTest {
 
         assertEquals(HttpStatus.CREATED, responseEntity.getStatusCode());
         assertNotEquals(responseEntity.getBody(), null);
-        assertEquals(responseEntity.getBody().getName(), divisionMapper.toDTO(divisionMapper.toDivision(createDivisionDTO)).getName());
+        assertEquals(responseEntity.getBody().getName(), divisionMapper.divisionToDivisionDTO(divisionMapper.createDivisionDTOToDivision(createDivisionDTO)).getName());
     }
 
     @Test
@@ -71,7 +71,7 @@ class DivisionControllerTest {
 
         int sizeBeforeAdding = divisionService.getAllDivisions().size();
 
-        divisionService.save(divisionMapper.toDivision(createDivisionDTO));
+        divisionService.save(divisionMapper.createDivisionDTOToDivision(createDivisionDTO));
 
         ResponseEntity<DivisionDTO[]> responseEntity = this.testRestTemplate
                 .getForEntity("http://localhost:" + port + "/divisions", DivisionDTO[].class);

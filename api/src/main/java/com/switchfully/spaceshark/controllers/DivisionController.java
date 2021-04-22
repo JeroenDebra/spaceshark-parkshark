@@ -30,16 +30,16 @@ public class DivisionController {
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
     public DivisionDTO createDivision(@RequestBody CreateDivisionDTO createDivisionDTO){
-        Division division = divisionService.save(divisionMapper.toDivision(createDivisionDTO));
+        Division division = divisionService.save(divisionMapper.createDivisionDTOToDivision(createDivisionDTO));
         logger.info("Division is added: " + division);
-        return divisionMapper.toDTO(division);
+        return divisionMapper.divisionToDivisionDTO(division);
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     public List<DivisionDTO> getAllDivisions() {
         logger.info("Getting all divisions");
-        return divisionMapper.toDTOList(divisionService.getAllDivisions());
+        return divisionMapper.divisionListToDivisionDTOList(divisionService.getAllDivisions());
     }
 
 }
