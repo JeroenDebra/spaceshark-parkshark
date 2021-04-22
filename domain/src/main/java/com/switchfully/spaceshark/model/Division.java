@@ -17,10 +17,9 @@ public class Division {
     private String name;
     @Column(name = "original_name")
     private String originalName;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "director_id" )
     private Director director;
-
 
     public Division() {
     }
