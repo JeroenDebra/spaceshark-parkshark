@@ -13,7 +13,7 @@ public class PostalCode {
     private int id;
 
     @Column(name = "pcode")
-    private String postalCode;
+    private String code;
 
     @Column(name = "city")
     private String city;
@@ -21,10 +21,10 @@ public class PostalCode {
     public PostalCode() {
     }
 
-    public PostalCode(String postalCode, String city) {
-        ValidationUtil.throwExceptionIfNullOrEmptyOrBlank(postalCode, "postal code");
+    public PostalCode(String code, String city) {
+        ValidationUtil.throwExceptionIfNullOrEmptyOrBlank(code, "postal code");
         ValidationUtil.throwExceptionIfNullOrEmptyOrBlank(city, "city");
-        this.postalCode = postalCode;
+        this.code = code;
         this.city = city;
     }
 
@@ -36,13 +36,13 @@ public class PostalCode {
         this.id = id;
     }
 
-    public String getPostalCode() {
-        return postalCode;
+    public String getCode() {
+        return code;
     }
 
-    public void setPostalCode(String postalCode) {
+    public void setCode(String postalCode) {
         ValidationUtil.throwExceptionIfNullOrEmptyOrBlank(postalCode, "postal code");
-        this.postalCode = postalCode;
+        this.code = postalCode;
     }
 
     public String getCity() {

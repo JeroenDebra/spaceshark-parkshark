@@ -3,6 +3,7 @@ package com.switchfully.spaceshark.mappers;
 import com.switchfully.spaceshark.customExeptions.CategoryNotValidException;
 import com.switchfully.spaceshark.customExeptions.CurrencyNotValidException;
 import com.switchfully.spaceshark.dtos.addresses.AddressDto;
+import com.switchfully.spaceshark.dtos.addresses.CreateAddressDTO;
 import com.switchfully.spaceshark.dtos.contactpersons.ContactPersonDTO;
 import com.switchfully.spaceshark.dtos.parkinglots.CreateParkinglotDTO;
 import com.switchfully.spaceshark.dtos.parkinglots.ParkinglotDTO;
@@ -19,23 +20,23 @@ import org.springframework.stereotype.Component;
 @Component
 public class ParkinglotMapper {
 
-    public Parkinglot toParkinglot(CreateParkinglotDTO createParkinglotDTO){
+    public Parkinglot createParkinglotDTOToParkinglot(CreateParkinglotDTO createParkinglotDTO){
 
         Parkinglot parkinglot = new Parkinglot(createParkinglotDTO.getName(),
-                StringToCategory(createParkinglotDTO.getCategory()),
+                stringToCategory(createParkinglotDTO.getCategory()),
                 createParkinglotDTO.getMaxCapacity(),
                 toPrice(createParkinglotDTO),
                 toContactPerson(createParkinglotDTO),
-                toAddress(createParkinglotDTO));
+                addressDTOtoAddress(createParkinglotDTO.getAddress()));
 
         return parkinglot;
     }
 
-    private Address toAddress(CreateParkinglotDTO createParkinglotDTO){
-        return new Address(createParkinglotDTO.getAddress().getStreetName(),
-                createParkinglotDTO.getAddress().getStreetNumber(),
-                new PostalCode(createParkinglotDTO.getAddress().getPostalCodeDTO().getPostalCode(),
-                        createParkinglotDTO.getAddress().getPostalCodeDTO().getCity()));
+    private Address addressDTOtoAddress(CreateAddressDTO addressDTO){
+        return new Address(addressDTO.getStreetName(),
+                addressDTO.getStreetNumber(),
+                new PostalCode(addressDTO.getPostalCodeDTO().getCode(),
+                        addressDTO.getPostalCodeDTO().getCity()));
     }
 
     private ContactPerson toContactPerson(CreateParkinglotDTO createParkinglotDTO){
@@ -57,7 +58,7 @@ public class ParkinglotMapper {
         }
     }
 
-    private Category StringToCategory(String categoryStr){
+    private Category stringToCategory(String categoryStr){
         try {
             return Category.valueOf(categoryStr.toUpperCase());
         } catch (IllegalArgumentException illegalArgumentException) {
@@ -94,6 +95,6 @@ public class ParkinglotMapper {
     }
 
     public PostalCodeDTO postalCodeToPostalCodeDto(PostalCode postalDetails){
-        return new PostalCodeDTO().setPostalCode(postalDetails.getPostalCode()).setCity(postalDetails.getCity()).setId(postalDetails.getId());
+        return new PostalCodeDTO().setCode(postalDetails.getCode()).setCity(postalDetails.getCity()).setId(postalDetails.getId());
     }
 }

@@ -28,8 +28,8 @@ public class ParkinglotController {
     @PostMapping(consumes = "Application/JSON")
     @ResponseStatus(HttpStatus.CREATED)
     public ParkinglotDTO createParkinglot(@RequestBody CreateParkinglotDTO createParkinglotDTO) {
-        logger.info("parkinglot is being added: " + createParkinglotDTO);
-        Parkinglot parkinglot = parkinglotService.save(parkinglotMapper.toParkinglot(createParkinglotDTO));
+        logger.info("parkinglot is being added: " + createParkinglotDTO.toString());
+        Parkinglot parkinglot = parkinglotService.save(parkinglotMapper.createParkinglotDTOToParkinglot(createParkinglotDTO));
 
         return parkinglotMapper.toParkinglotDTO(parkinglot);
     }

@@ -105,5 +105,4 @@ public class Parkinglot {
         this.address = address;
     }
 
-
 }

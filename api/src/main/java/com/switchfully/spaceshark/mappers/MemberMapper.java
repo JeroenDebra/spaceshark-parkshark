@@ -35,7 +35,7 @@ public class MemberMapper {
 
     public Address createMemberDtoToAddress(CreateMemberDto createMemberDto) {
         return new Address(createMemberDto.getAddress().getStreetName(),createMemberDto.getAddress().getStreetNumber(),
-                new PostalCode(createMemberDto.getAddress().getPostalCodeDTO().getPostalCode(),
+                new PostalCode(createMemberDto.getAddress().getPostalCodeDTO().getCode(),
                         createMemberDto.getAddress().getPostalCodeDTO().getCity()));
     }
 
@@ -45,11 +45,11 @@ public class MemberMapper {
     }
 
     public PostalCodeDTO postalCodeToPostalCodeDto(PostalCode postalDetails){
-        return new PostalCodeDTO().setPostalCode(postalDetails.getPostalCode()).setCity(postalDetails.getCity()).setId(postalDetails.getId());
+        return new PostalCodeDTO().setCode(postalDetails.getCode()).setCity(postalDetails.getCity()).setId(postalDetails.getId());
     }
 
     public PostalCode createPostalCodeDtoToPostalCode(CreatePostalCodeDTO createPostalCodeDTO){
-        return new PostalCode(createPostalCodeDTO.getPostalCode(), createPostalCodeDTO.getCity());
+        return new PostalCode(createPostalCodeDTO.getCode(), createPostalCodeDTO.getCity());
     }
 
     public List<OverviewMemberDTO> toOverviewMemberDtoList(List<Member> allMembers) {

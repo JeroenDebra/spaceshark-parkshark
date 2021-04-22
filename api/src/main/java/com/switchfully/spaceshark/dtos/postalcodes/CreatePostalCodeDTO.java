@@ -2,18 +2,18 @@ package com.switchfully.spaceshark.dtos.postalcodes;
 
 public class CreatePostalCodeDTO {
 
-    private String postalCode;
+    private String code;
     private String city;
 
     public CreatePostalCodeDTO() {
     }
 
-    public String getPostalCode() {
-        return postalCode;
+    public String getCode() {
+        return code;
     }
 
-    public void setPostalCode(String postalCode) {
-        this.postalCode = postalCode;
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public String getCity() {

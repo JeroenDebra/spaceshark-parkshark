@@ -40,7 +40,7 @@ class MemberControllerTest {
         CreateAddressDTO createAddressDTO = new CreateAddressDTO();
         CreatePostalCodeDTO createPostalCodeDTO = new CreatePostalCodeDTO();
 
-        createPostalCodeDTO.setPostalCode("1234");
+        createPostalCodeDTO.setCode("1234");
         createPostalCodeDTO.setCity("Leuven");
 
         createAddressDTO.setStreetName("street");
@@ -68,7 +68,7 @@ class MemberControllerTest {
         CreateAddressDTO createAddressDTO = new CreateAddressDTO();
         CreatePostalCodeDTO createPostalCodeDTO = new CreatePostalCodeDTO();
 
-        createPostalCodeDTO.setPostalCode("1234");
+        createPostalCodeDTO.setCode("1234");
         createPostalCodeDTO.setCity("Leuven");
 
         createAddressDTO.setStreetName("street");
@@ -94,7 +94,7 @@ class MemberControllerTest {
         CreateAddressDTO createAddressDTO = new CreateAddressDTO();
         CreatePostalCodeDTO createPostalCodeDTO = new CreatePostalCodeDTO();
 
-        createPostalCodeDTO.setPostalCode("1234");
+        createPostalCodeDTO.setCode("1234");
         createPostalCodeDTO.setCity("Leuven");
 
         createAddressDTO.setStreetName("street");
