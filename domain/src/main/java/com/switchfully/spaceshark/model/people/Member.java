@@ -61,6 +61,7 @@ public class Member {
     }
 
     public void setFirstName(String firstName) {
+
         this.firstName = firstName;
     }
 
@@ -69,6 +70,7 @@ public class Member {
     }
 
     public void setLastName(String lastName) {
+
         this.lastName = lastName;
     }
 
@@ -77,6 +79,7 @@ public class Member {
     }
 
     public void setAddress(Address memberAddress) {
+
         this.memberAddress = memberAddress;
     }
 
@@ -85,6 +88,7 @@ public class Member {
     }
 
     public void setPhoneNumber(String phoneNumber) {
+
         this.phoneNumber = phoneNumber;
     }
 
@@ -93,6 +97,7 @@ public class Member {
     }
 
     public void setEmail(String email) {
+
         this.email = email;
     }
 
