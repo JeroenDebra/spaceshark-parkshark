@@ -3,9 +3,7 @@ package com.switchfully.spaceshark.model.parkingallocation;
 import com.switchfully.spaceshark.model.parkingLot.Parkinglot;
 import com.switchfully.spaceshark.model.people.Member;
 import com.switchfully.spaceshark.utils.ValidationUtil;
-
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
