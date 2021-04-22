@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.time.LocalDateTime;
 
 @Service
 @Transactional
@@ -26,19 +27,24 @@ public class ParkingSpotService {
         this.memberService = memberService;
     }
 
-    public ParkingSpot createParkingSpot(int parkingLotId, int memberId) {
+    public ParkingSpot createParkingSpot(int parkingLotId, int memberId, LocalDateTime startTime, String licencePlate) {
         Parkinglot parkinglot = parkinglotService.findParkinglotById(parkingLotId);
         Member member = memberService.findMemberById(memberId);
 
-
-        if (parkinglot.getMaxCapacity() >= parkingSpotRepository.findAllByParkinglot(parkinglot).size()) {
+        if (parkinglot.getMaxCapacity() <= parkingSpotRepository.findAllByParkinglot(parkinglot).size()) {
             logger.warn("parking spot for member: " + memberId + " could not be created because parkinglot " + parkingLotId + "is full." );
             throw new IllegalStateException("cant add parkingspot because parking lot is full");
+        }
+
+        if (!member.getLicencePlate().equals(licencePlate)) {
+            logger.warn("parking spot for member: " + memberId + " could not be created because licence plate " + licencePlate + " is not correct.");
+            throw new IllegalArgumentException("Licence plate does not belong to the member: \n" + member);
         }
 
         ParkingSpot parkingSpot = new ParkingSpot();
         parkingSpot.setParkinglot(parkinglot);
         parkingSpot.setMember(member);
+        parkingSpot.setStartTime(startTime);
 
         return parkingSpotRepository.save(parkingSpot);
 
