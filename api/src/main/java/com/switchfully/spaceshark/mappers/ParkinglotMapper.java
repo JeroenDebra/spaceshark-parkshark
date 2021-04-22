@@ -6,6 +6,7 @@ import com.switchfully.spaceshark.dtos.addresses.AddressDto;
 import com.switchfully.spaceshark.dtos.addresses.CreateAddressDTO;
 import com.switchfully.spaceshark.dtos.contactpersons.ContactPersonDTO;
 import com.switchfully.spaceshark.dtos.parkinglots.CreateParkinglotDTO;
+import com.switchfully.spaceshark.dtos.parkinglots.OverviewParkinglotDTO;
 import com.switchfully.spaceshark.dtos.parkinglots.ParkinglotDTO;
 import com.switchfully.spaceshark.dtos.postalcodes.PostalCodeDTO;
 import com.switchfully.spaceshark.model.Price;
@@ -15,11 +16,17 @@ import com.switchfully.spaceshark.model.parkingLot.Category;
 import com.switchfully.spaceshark.model.parkingLot.Currency;
 import com.switchfully.spaceshark.model.parkingLot.Parkinglot;
 import com.switchfully.spaceshark.model.people.ContactPerson;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class ParkinglotMapper {
 
+    private static final Logger logger = LoggerFactory.getLogger(ParkinglotMapper.class);
     public Parkinglot createParkinglotDTOToParkinglot(CreateParkinglotDTO createParkinglotDTO){
 
         Parkinglot parkinglot = new Parkinglot(createParkinglotDTO.getName(),
@@ -96,5 +103,21 @@ public class ParkinglotMapper {
 
     public PostalCodeDTO postalCodeToPostalCodeDto(PostalCode postalDetails){
         return new PostalCodeDTO().setCode(postalDetails.getCode()).setCity(postalDetails.getCity()).setId(postalDetails.getId());
+    }
+
+    public List<OverviewParkinglotDTO> toOverviewParkingLotDto(List<Parkinglot> allParkingLots) {
+        logger.info("Converting a list of parkinglots to a list of overviewParkingLotDto, returning a list of overviewParkingLotDto");
+        return allParkingLots.stream().map(parkinglot -> parkinglotToOverviewParkingLotDto(parkinglot)).collect(Collectors.toList());
+    }
+
+    private OverviewParkinglotDTO parkinglotToOverviewParkingLotDto(Parkinglot parkinglot) {
+        logger.info("Converting a parkinglot to an overviewParkingLotDto, returning an overviewParkingLotDto");
+        return new OverviewParkinglotDTO()
+                .setId(parkinglot.getId())
+                .setName(parkinglot.getName())
+                .setMaxCapacity(parkinglot.getMaxCapacity())
+                .setGsm(parkinglot.getContactPerson().getGsm())
+                .setPhone(parkinglot.getContactPerson().getPhoneNumber())
+                .setEmail(parkinglot.getContactPerson().getEmail());
     }
 }
