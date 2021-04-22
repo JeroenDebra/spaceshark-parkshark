@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+import java.util.List;
+
 @Service
 public class ParkinglotService {
 
@@ -18,6 +20,10 @@ public class ParkinglotService {
 
     public Parkinglot save(Parkinglot parkinglot) {
         return parkinglotRepository.save(parkinglot);
+    }
+
+    public List<Parkinglot> getAllParkingLots() {
+        return parkinglotRepository.findAll();
     }
 
     public Parkinglot findParkinglotById(int id){
