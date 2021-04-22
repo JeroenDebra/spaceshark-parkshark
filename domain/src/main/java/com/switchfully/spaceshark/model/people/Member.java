@@ -120,4 +120,18 @@ public class Member {
     public int getId() {
         return id;
     }
+
+    @Override
+    public String toString() {
+        return "Member{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", memberAddress=" + memberAddress +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", email='" + email + '\'' +
+                ", licencePlate='" + licencePlate + '\'' +
+                ", registrationDate=" + registrationDate +
+                '}';
+    }
 }

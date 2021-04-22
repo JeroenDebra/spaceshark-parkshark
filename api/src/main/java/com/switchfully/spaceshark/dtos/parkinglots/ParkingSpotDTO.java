@@ -1,12 +1,15 @@
-package com.switchfully.spaceshark.controllers;
+package com.switchfully.spaceshark.dtos.parkinglots;
 
 import com.switchfully.spaceshark.dtos.members.MemberDto;
+
+import java.time.LocalDateTime;
 
 public class ParkingSpotDTO {
 
     private int parkingSpotId;
     private MemberDto member;
-    private ParkingSpotDTO parkinglot;
+    private ParkinglotDTO parkinglot;
+    private LocalDateTime startTime;
 
     public int getParkingSpotId() {
         return parkingSpotId;
@@ -24,11 +27,19 @@ public class ParkingSpotDTO {
         this.member = member;
     }
 
-    public ParkingSpotDTO getParkinglot() {
+    public ParkinglotDTO getParkinglot() {
         return parkinglot;
     }
 
-    public void setParkinglot(ParkingSpotDTO parkinglot) {
+    public void setParkinglot(ParkinglotDTO parkinglot) {
         this.parkinglot = parkinglot;
+    }
+
+    public LocalDateTime getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(LocalDateTime startTime) {
+        this.startTime = startTime;
     }
 }

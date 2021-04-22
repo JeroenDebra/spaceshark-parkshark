@@ -1,10 +1,13 @@
-package com.switchfully.spaceshark.controllers;
+package com.switchfully.spaceshark.dtos.parkinglots;
+
+import java.time.LocalDateTime;
 
 public class CreateParkingSpotDTO {
 
     private int memberId;
     private int parkinglotId;
     private String licensePlate;
+    private LocalDateTime startTime;
 
     public int getMemberId() {
         return memberId;
@@ -28,5 +31,13 @@ public class CreateParkingSpotDTO {
 
     public void setLicensePlate(String licensePlate) {
         this.licensePlate = licensePlate;
+    }
+
+    public LocalDateTime getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(LocalDateTime startTime) {
+        this.startTime = startTime;
     }
 }
