@@ -42,7 +42,8 @@ public class DivisionController {
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
-    public List<DivisionDTO> getAllDivisions() {
+    public List<DivisionDTO> getAllDivisions( @RequestHeader(value = "userId", required = false) String userId) {
+        authorizationService.throwExceptionIfNotManager(userId);
         logger.info("Getting all divisions");
         return divisionMapper.divisionListToDivisionDTOList(divisionService.getAllDivisions());
     }
