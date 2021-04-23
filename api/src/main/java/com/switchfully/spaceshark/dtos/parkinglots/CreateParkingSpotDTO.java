@@ -40,4 +40,14 @@ public class CreateParkingSpotDTO {
     public void setStartTime(LocalDateTime startTime) {
         this.startTime = startTime;
     }
+
+    @Override
+    public String toString() {
+        return "CreateParkingSpotDTO{" +
+                "memberId=" + memberId +
+                ", parkinglotId=" + parkinglotId +
+                ", licensePlate='" + licensePlate + '\'' +
+                ", startTime=" + startTime +
+                '}';
+    }
 }
