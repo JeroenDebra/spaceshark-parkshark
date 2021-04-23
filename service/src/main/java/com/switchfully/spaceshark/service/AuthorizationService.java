@@ -19,7 +19,7 @@ public class AuthorizationService {
         try {
             Integer.valueOf(userId);
         } catch (NumberFormatException e) {
-            throw new NotAuthorizedException("user with id " + userId + "is not a valid id");
+            throw new NotAuthorizedException("user with id " + userId + " is not a valid id");
         }
     }
 
@@ -27,14 +27,14 @@ public class AuthorizationService {
         throwExceptionIfIdNotParsable(userId);
 
         if (!managerService.managerExistsWithId(Integer.valueOf(userId))){
-            throw new NotAuthorizedException("user with id " + userId + "is not a manager");
+            throw new NotAuthorizedException("user with id " + userId + " is not a manager");
         }
     }
     public void throwExceptionIfNotMember(String userId){
         if (!memberService.memberExistsWithId(Integer.valueOf(userId))){
             throwExceptionIfIdNotParsable(userId);
 
-            throw new NotAuthorizedException("user with id " + userId + "is not a member");
+            throw new NotAuthorizedException("user with id " + userId + " is not a member");
         }
     }
 
