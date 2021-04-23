@@ -1,6 +1,6 @@
 # ParkShark
 
-![ParkShark logo](parkshark.png)
+![ParkShark logo](spaceshark.jpg)
 
 ParkShark is a totally legit pay-to-use parking lot company.
 Their goal is to take over the (underground) world of parking lots. They first tried to accomplish this by using violence.
