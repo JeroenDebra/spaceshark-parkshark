@@ -14,13 +14,26 @@ public class AuthorizationService {
         this.memberService = memberService;
     }
 
+    public void throwExceptionIfIdNotParsable(String userId){
+
+        try {
+            Integer.valueOf(userId);
+        } catch (NumberFormatException e) {
+            throw new NotAuthorizedException("user with id " + userId + "is not a valid id");
+        }
+    }
+
     public void throwExceptionIfNotManager(String userId){
+        throwExceptionIfIdNotParsable(userId);
+
         if (!managerService.managerExistsWithId(Integer.valueOf(userId))){
             throw new NotAuthorizedException("user with id " + userId + "is not a manager");
         }
     }
     public void throwExceptionIfNotMember(String userId){
         if (!memberService.memberExistsWithId(Integer.valueOf(userId))){
+            throwExceptionIfIdNotParsable(userId);
+
             throw new NotAuthorizedException("user with id " + userId + "is not a member");
         }
     }
