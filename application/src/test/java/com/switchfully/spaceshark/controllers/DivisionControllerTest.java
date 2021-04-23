@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.annotation.DirtiesContext;
@@ -39,8 +41,13 @@ class DivisionControllerTest {
         createDivisionDTO.setDirector_firstname("firstName");
         createDivisionDTO.setDirector_lastname("lastName");
 
+        HttpHeaders header = new HttpHeaders();
+        header.set("userId","1");
+
+        HttpEntity<CreateDivisionDTO> request = new HttpEntity<>(createDivisionDTO, header);
+
         ResponseEntity<DivisionDTO> responseEntity = this.testRestTemplate
-                .postForEntity("http://localhost:" + port + "/divisions", createDivisionDTO, DivisionDTO.class);
+                .postForEntity("http://localhost:" + port + "/divisions", request, DivisionDTO.class);
 
         assertEquals(HttpStatus.CREATED, responseEntity.getStatusCode());
         assertNotEquals(responseEntity.getBody(), null);
