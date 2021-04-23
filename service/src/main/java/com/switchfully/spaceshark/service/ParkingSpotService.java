@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -51,7 +52,8 @@ public class ParkingSpotService {
 
     }
 
-    public List<ParkingSpot> getAllParkingSpots() {
-        return parkingSpotRepository.findAll();
+    public List<ParkingSpot> getAllParkingSpots(int limit) {
+        return parkingSpotRepository.getParkingSpotsByIdIsGreaterThanOrderByStartTimeAsc(0).stream().limit(limit).collect(Collectors.toList());
     }
+
 }
