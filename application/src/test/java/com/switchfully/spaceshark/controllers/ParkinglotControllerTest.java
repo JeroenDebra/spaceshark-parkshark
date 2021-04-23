@@ -2,6 +2,8 @@ package com.switchfully.spaceshark.controllers;
 
 import com.switchfully.spaceshark.dtos.addresses.CreateAddressDTO;
 import com.switchfully.spaceshark.dtos.contactpersons.CreateContactPersonDTO;
+import com.switchfully.spaceshark.dtos.divisions.CreateDivisionDTO;
+import com.switchfully.spaceshark.dtos.divisions.DivisionDTO;
 import com.switchfully.spaceshark.dtos.parkinglots.CreateParkinglotDTO;
 import com.switchfully.spaceshark.dtos.parkinglots.OverviewParkinglotDTO;
 import com.switchfully.spaceshark.dtos.parkinglots.ParkinglotDTO;
@@ -13,8 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.test.annotation.DirtiesContext;
 
 import java.math.BigDecimal;
@@ -33,21 +34,26 @@ public class ParkinglotControllerTest {
     private ParkinglotService parkinglotService;
     @Autowired
     private ParkinglotMapper parkinglotMapper;
+
     @Test
-    void createParkinglotTest(){
+    void createParkinglotTest() {
         CreateParkinglotDTO createParkinglotDTO = new CreateParkinglotDTO();
         CreatePostalCodeDTO createPostalCodeDTO = new CreatePostalCodeDTO();
         CreateAddressDTO createAddressDTO = new CreateAddressDTO();
         CreateContactPersonDTO createContactPersonDTO = new CreateContactPersonDTO();
+
         createContactPersonDTO.setName("name");
         createContactPersonDTO.setGsm("+12345678");
         createContactPersonDTO.setPhoneNumber("+1234567");
         createContactPersonDTO.setEmail("e@email.com");
+
         createPostalCodeDTO.setCode("1234");
         createPostalCodeDTO.setCity("city");
+
         createAddressDTO.setStreetName("streetName");
         createAddressDTO.setStreetNumber("1234");
         createAddressDTO.setPostalCodeDTO(createPostalCodeDTO);
+
         createParkinglotDTO.setName("name");
         createParkinglotDTO.setMaxCapacity(2);
         createParkinglotDTO.setCategory("UNDERGROUND_BUILDING");
@@ -55,26 +61,39 @@ public class ParkinglotControllerTest {
         createParkinglotDTO.setContactPerson(createContactPersonDTO);
         createParkinglotDTO.setPricePerHour(new BigDecimal(1));
         createParkinglotDTO.setCurrency("EUR");
-        ResponseEntity<ParkinglotDTO> responseEntity = this.testRestTemplate.postForEntity("http://localhost:" + port + "/parkinglots", createParkinglotDTO, ParkinglotDTO.class);
+
+        HttpHeaders header = new HttpHeaders();
+        header.set("userId","1");
+
+        HttpEntity<CreateParkinglotDTO> request = new HttpEntity<>(createParkinglotDTO, header);
+
+        ResponseEntity<ParkinglotDTO> responseEntity = this.testRestTemplate
+                .postForEntity("http://localhost:" + port + "/parkinglots", request, ParkinglotDTO.class);
+
         assertEquals(HttpStatus.CREATED, responseEntity.getStatusCode());
         assertNotEquals(responseEntity.getBody(), null);
         assertEquals(responseEntity.getBody().getName(), parkinglotMapper.toParkinglotDTO(parkinglotMapper.createParkinglotDTOToParkinglot(createParkinglotDTO)).getName());
     }
+
     @Test
-    void testGetAllParkingLots(){
+    void testGetAllParkingLots() {
         CreateParkinglotDTO createParkinglotDTO = new CreateParkinglotDTO();
         CreatePostalCodeDTO createPostalCodeDTO = new CreatePostalCodeDTO();
         CreateAddressDTO createAddressDTO = new CreateAddressDTO();
         CreateContactPersonDTO createContactPersonDTO = new CreateContactPersonDTO();
+
         createContactPersonDTO.setName("name");
         createContactPersonDTO.setGsm("+12345678");
         createContactPersonDTO.setPhoneNumber("+1234567");
         createContactPersonDTO.setEmail("e@email.com");
+
         createPostalCodeDTO.setCode("1234");
         createPostalCodeDTO.setCity("city");
+
         createAddressDTO.setStreetName("streetName");
         createAddressDTO.setStreetNumber("1234");
         createAddressDTO.setPostalCodeDTO(createPostalCodeDTO);
+
         createParkinglotDTO.setName("name");
         createParkinglotDTO.setMaxCapacity(2);
         createParkinglotDTO.setCategory("UNDERGROUND_BUILDING");
@@ -82,9 +101,17 @@ public class ParkinglotControllerTest {
         createParkinglotDTO.setContactPerson(createContactPersonDTO);
         createParkinglotDTO.setPricePerHour(new BigDecimal(1));
         createParkinglotDTO.setCurrency("EUR");
+
+        HttpHeaders header = new HttpHeaders();
+        header.set("userId","1");
+        HttpEntity<String> request = new HttpEntity<>(header);
+
         int sizeBeforeAdding = parkinglotService.getAllParkingLots().size();
         parkinglotService.save(parkinglotMapper.createParkinglotDTOToParkinglot(createParkinglotDTO));
-        ResponseEntity<OverviewParkinglotDTO[]> responseEntity = this.testRestTemplate.getForEntity("http://localhost:" + port + "/parkinglots", OverviewParkinglotDTO[].class);
+
+        ResponseEntity<OverviewParkinglotDTO[]> responseEntity = this.testRestTemplate
+            .exchange("http://localhost:" + port + "/divisions", HttpMethod.GET, request, OverviewParkinglotDTO[].class);
+
         assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
         assertEquals(sizeBeforeAdding + 1, parkinglotService.getAllParkingLots().size());
     }

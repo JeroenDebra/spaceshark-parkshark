@@ -20,7 +20,9 @@ public class ParkingSpotController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public ParkingSpotDTO createParkingSpot(@RequestBody CreateParkingSpotDTO createParkingSpotDTO) {
+    public ParkingSpotDTO createParkingSpot(@RequestBody CreateParkingSpotDTO createParkingSpotDTO,
+                                            @RequestHeader(value = "userId", required = false) String userId) {
+
         return parkingSpotMapper.parkingSpotToParkingSpotDTO(parkingSpotService.createParkingSpot(
                 createParkingSpotDTO.getParkinglotId(),
                 createParkingSpotDTO.getMemberId(),
