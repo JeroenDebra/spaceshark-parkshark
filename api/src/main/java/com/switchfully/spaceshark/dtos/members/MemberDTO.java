@@ -1,10 +1,10 @@
 package com.switchfully.spaceshark.dtos.members;
 
-import com.switchfully.spaceshark.dtos.addresses.AddressDto;
+import com.switchfully.spaceshark.dtos.addresses.AddressDTO;
 
 import java.time.LocalDate;
 
-public class MemberDto {
+public class MemberDTO {
 
     private int id;
     private String firstName;
@@ -13,44 +13,44 @@ public class MemberDto {
     private String email;
     private String licencePlate;
     private LocalDate registrationDate;
-    private AddressDto address;
+    private AddressDTO address;
 
-    public MemberDto setId(int id) {
+    public MemberDTO setId(int id) {
         this.id = id;
         return this;
     }
 
-    public MemberDto setFirstName(String firstName) {
+    public MemberDTO setFirstName(String firstName) {
         this.firstName = firstName;
         return this;
     }
 
-    public MemberDto setLastName(String lastName) {
+    public MemberDTO setLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
 
-    public MemberDto setPhoneNumber(String phoneNumber) {
+    public MemberDTO setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
 
-    public MemberDto setEmail(String email) {
+    public MemberDTO setEmail(String email) {
         this.email = email;
         return this;
     }
 
-    public MemberDto setLicencePlate(String licencePlate) {
+    public MemberDTO setLicencePlate(String licencePlate) {
         this.licencePlate = licencePlate;
         return this;
     }
 
-    public MemberDto setRegistrationDate(LocalDate date) {
+    public MemberDTO setRegistrationDate(LocalDate date) {
         this.registrationDate = date;
         return this;
     }
 
-    public MemberDto setAddress(AddressDto address) {
+    public MemberDTO setAddress(AddressDTO address) {
         this.address = address;
         return this;
     }
@@ -83,7 +83,7 @@ public class MemberDto {
         return registrationDate;
     }
 
-    public AddressDto getAddress() {
+    public AddressDTO getAddress() {
         return address;
     }
 }

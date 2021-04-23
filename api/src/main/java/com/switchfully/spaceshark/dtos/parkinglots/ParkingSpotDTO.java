@@ -1,13 +1,13 @@
 package com.switchfully.spaceshark.dtos.parkinglots;
 
-import com.switchfully.spaceshark.dtos.members.MemberDto;
+import com.switchfully.spaceshark.dtos.members.MemberDTO;
 
 import java.time.LocalDateTime;
 
 public class ParkingSpotDTO {
 
     private int parkingSpotId;
-    private MemberDto member;
+    private MemberDTO member;
     private ParkinglotDTO parkinglot;
     private LocalDateTime startTime;
 
@@ -19,11 +19,11 @@ public class ParkingSpotDTO {
         this.parkingSpotId = parkingSpotId;
     }
 
-    public MemberDto getMember() {
+    public MemberDTO getMember() {
         return member;
     }
 
-    public void setMember(MemberDto member) {
+    public void setMember(MemberDTO member) {
         this.member = member;
     }
 

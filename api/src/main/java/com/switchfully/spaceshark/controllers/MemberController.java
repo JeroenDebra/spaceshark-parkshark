@@ -1,7 +1,7 @@
 package com.switchfully.spaceshark.controllers;
 
 import com.switchfully.spaceshark.dtos.members.CreateMemberDto;
-import com.switchfully.spaceshark.dtos.members.MemberDto;
+import com.switchfully.spaceshark.dtos.members.MemberDTO;
 import com.switchfully.spaceshark.dtos.members.OverviewMemberDTO;
 import com.switchfully.spaceshark.mappers.MemberMapper;
 import com.switchfully.spaceshark.model.people.Member;
@@ -33,7 +33,7 @@ public class MemberController {
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
-    public MemberDto createMember(@RequestBody CreateMemberDto createMemberDto){
+    public MemberDTO createMember(@RequestBody CreateMemberDto createMemberDto){
 
         Member member = memberService.save(memberMapper.createMemberDtoToMember(createMemberDto));
 

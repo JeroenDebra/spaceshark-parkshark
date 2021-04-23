@@ -2,7 +2,7 @@ package com.switchfully.spaceshark.mappers;
 
 import com.switchfully.spaceshark.customExeptions.CategoryNotValidException;
 import com.switchfully.spaceshark.customExeptions.CurrencyNotValidException;
-import com.switchfully.spaceshark.dtos.addresses.AddressDto;
+import com.switchfully.spaceshark.dtos.addresses.AddressDTO;
 import com.switchfully.spaceshark.dtos.addresses.CreateAddressDTO;
 import com.switchfully.spaceshark.dtos.contactpersons.ContactPersonDTO;
 import com.switchfully.spaceshark.dtos.parkinglots.CreateParkinglotDTO;
@@ -96,8 +96,8 @@ public class ParkinglotMapper {
                 .setEmail(contactPerson.getEmail());
     }
 
-    public AddressDto addressToAddressDto(Address address){
-        return new AddressDto().setStreetName(address.getStreetName()).setStreetNumber(address.getStreetNumber())
+    public AddressDTO addressToAddressDto(Address address){
+        return new AddressDTO().setStreetName(address.getStreetName()).setStreetNumber(address.getStreetNumber())
                 .setPostalCode(postalCodeToPostalCodeDto(address.getPostalCode())).setId(address.getId());
     }
 

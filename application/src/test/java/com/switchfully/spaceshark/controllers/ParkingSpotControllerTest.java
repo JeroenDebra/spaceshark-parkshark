@@ -1,7 +1,5 @@
 package com.switchfully.spaceshark.controllers;
 
-import com.switchfully.spaceshark.dtos.divisions.CreateDivisionDTO;
-import com.switchfully.spaceshark.dtos.members.OverviewMemberDTO;
 import com.switchfully.spaceshark.dtos.parkinglots.CreateParkingSpotDTO;
 import com.switchfully.spaceshark.dtos.parkinglots.ParkingSpotDTO;
 import com.switchfully.spaceshark.mappers.ParkingSpotMapper;

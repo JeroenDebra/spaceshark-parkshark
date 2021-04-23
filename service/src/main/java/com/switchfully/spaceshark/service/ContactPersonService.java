@@ -13,7 +13,4 @@ public class ContactPersonService {
         this.contactPersonRepository = contactPersonRepository;
     }
 
-    public ContactPerson contactPersonFindById (int contactPersonId){
-        return contactPersonRepository.findById(contactPersonId).get();
-    }
 }

@@ -2,9 +2,8 @@ package com.switchfully.spaceshark.controllers;
 
 import com.switchfully.spaceshark.dtos.addresses.CreateAddressDTO;
 import com.switchfully.spaceshark.dtos.members.CreateMemberDto;
-import com.switchfully.spaceshark.dtos.members.MemberDto;
+import com.switchfully.spaceshark.dtos.members.MemberDTO;
 import com.switchfully.spaceshark.dtos.members.OverviewMemberDTO;
-import com.switchfully.spaceshark.dtos.parkinglots.OverviewParkinglotDTO;
 import com.switchfully.spaceshark.dtos.postalcodes.CreatePostalCodeDTO;
 import com.switchfully.spaceshark.mappers.MemberMapper;
 import com.switchfully.spaceshark.service.MemberService;
@@ -54,8 +53,8 @@ class MemberControllerTest {
                 .setPhoneNumber("+32045824684")
                 .setAddress(createAddressDTO);
 
-        ResponseEntity<MemberDto> responseEntity = this.testRestTemplate
-                .postForEntity("http://localhost:" + port + "/members", createMemberDto, MemberDto.class);
+        ResponseEntity<MemberDTO> responseEntity = this.testRestTemplate
+                .postForEntity("http://localhost:" + port + "/members", createMemberDto, MemberDTO.class);
 
         assertEquals(HttpStatus.CREATED, responseEntity.getStatusCode());
         assertNotEquals(responseEntity.getBody(), null);
@@ -82,8 +81,8 @@ class MemberControllerTest {
                 .setPhoneNumber("+32045824684")
                 .setAddress(createAddressDTO);
 
-        ResponseEntity<MemberDto> responseEntity = this.testRestTemplate
-                .postForEntity("http://localhost:" + port + "/members", createMemberDto, MemberDto.class);
+        ResponseEntity<MemberDTO> responseEntity = this.testRestTemplate
+                .postForEntity("http://localhost:" + port + "/members", createMemberDto, MemberDTO.class);
 
         assertEquals(HttpStatus.BAD_REQUEST, responseEntity.getStatusCode());
     }

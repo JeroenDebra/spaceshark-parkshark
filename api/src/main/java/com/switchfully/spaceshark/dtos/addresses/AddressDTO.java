@@ -2,21 +2,21 @@ package com.switchfully.spaceshark.dtos.addresses;
 
 import com.switchfully.spaceshark.dtos.postalcodes.PostalCodeDTO;
 
-public class AddressDto {
+public class AddressDTO {
 
     private int id;
     private String StreetName;
     private String StreetNumber;
     private PostalCodeDTO postalCode;
 
-    public AddressDto() {
+    public AddressDTO() {
     }
 
     public String getStreetName() {
         return StreetName;
     }
 
-    public AddressDto setStreetName(String streetName) {
+    public AddressDTO setStreetName(String streetName) {
         StreetName = streetName;
         return this;
     }
@@ -25,7 +25,7 @@ public class AddressDto {
         return StreetNumber;
     }
 
-    public AddressDto setStreetNumber(String streetNumber) {
+    public AddressDTO setStreetNumber(String streetNumber) {
         StreetNumber = streetNumber;
         return this;
     }
@@ -34,7 +34,7 @@ public class AddressDto {
         return postalCode;
     }
 
-    public AddressDto setPostalCode(PostalCodeDTO postalCode) {
+    public AddressDTO setPostalCode(PostalCodeDTO postalCode) {
         this.postalCode = postalCode;
         return this;
     }
@@ -43,7 +43,7 @@ public class AddressDto {
         return id;
     }
 
-    public AddressDto setId(int id) {
+    public AddressDTO setId(int id) {
         this.id = id;
         return this;
     }

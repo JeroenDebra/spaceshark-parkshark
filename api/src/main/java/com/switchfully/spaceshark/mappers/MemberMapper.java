@@ -1,10 +1,9 @@
 package com.switchfully.spaceshark.mappers;
 
-import com.switchfully.spaceshark.dtos.addresses.AddressDto;
+import com.switchfully.spaceshark.dtos.addresses.AddressDTO;
 import com.switchfully.spaceshark.dtos.members.CreateMemberDto;
-import com.switchfully.spaceshark.dtos.members.MemberDto;
+import com.switchfully.spaceshark.dtos.members.MemberDTO;
 import com.switchfully.spaceshark.dtos.members.OverviewMemberDTO;
-import com.switchfully.spaceshark.dtos.postalcodes.CreatePostalCodeDTO;
 import com.switchfully.spaceshark.dtos.postalcodes.PostalCodeDTO;
 import com.switchfully.spaceshark.model.addresses.Address;
 import com.switchfully.spaceshark.model.addresses.PostalCode;
@@ -27,9 +26,9 @@ public class MemberMapper {
                 createMemberDto.getPhoneNumber(), createMemberDto.getEmail(), createMemberDto.getLicencePlate());
     }
 
-    public MemberDto memberToMemberDto(Member member) {
+    public MemberDTO memberToMemberDto(Member member) {
         logger.info("Converting a Member to a MemberDto, return a MemberDto.");
-        return new MemberDto()
+        return new MemberDTO()
                 .setFirstName(member.getFirstName())
                 .setLastName(member.getLastName())
                 .setAddress(addressToAddressDto(member.getAddress()))
@@ -47,9 +46,9 @@ public class MemberMapper {
                         createMemberDto.getAddress().getPostalCodeDTO().getCity()));
     }
 
-    public AddressDto addressToAddressDto(Address address){
+    public AddressDTO addressToAddressDto(Address address){
         logger.info("Converting an Address to an AddressDto, return a AddressDto.");
-        return new AddressDto().setStreetName(address.getStreetName()).setStreetNumber(address.getStreetNumber())
+        return new AddressDTO().setStreetName(address.getStreetName()).setStreetNumber(address.getStreetNumber())
                 .setPostalCode(postalCodeToPostalCodeDto(address.getPostalCode())).setId(address.getId());
     }
 
