@@ -3,7 +3,6 @@ package com.switchfully.spaceshark.controllers;
 import com.switchfully.spaceshark.customExeptions.CategoryNotValidException;
 import com.switchfully.spaceshark.customExeptions.CurrencyNotValidException;
 import com.switchfully.spaceshark.customExeptions.NotAuthorizedException;
-import com.switchfully.spaceshark.model.parkingLot.Category;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -43,7 +42,7 @@ public class ExceptionHandlerController extends ResponseEntityExceptionHandler {
     }
 
     @ExceptionHandler(CurrencyNotValidException.class)
-    public void handleInvalidcurrency(CurrencyNotValidException exception, HttpServletResponse response) throws IOException{
+    public void handleInvalidCurrency(CurrencyNotValidException exception, HttpServletResponse response) throws IOException{
         LOGGER.warn(exception.getMessage(), exception);
         response.sendError(HttpServletResponse.SC_BAD_REQUEST, exception.getMessage());
     }
