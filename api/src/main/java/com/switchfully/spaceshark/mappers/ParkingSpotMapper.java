@@ -1,9 +1,11 @@
 package com.switchfully.spaceshark.mappers;
 
-import com.switchfully.spaceshark.dtos.parkinglots.CreateParkingSpotDTO;
 import com.switchfully.spaceshark.dtos.parkinglots.ParkingSpotDTO;
 import com.switchfully.spaceshark.model.parkingallocation.ParkingSpot;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class ParkingSpotMapper {
@@ -22,5 +24,9 @@ public class ParkingSpotMapper {
         parkingSpotDTO.setParkinglot(parkinglotMapper.toParkinglotDTO(parkingSpot.getParkinglot()));
         parkingSpotDTO.setStartTime(parkingSpot.getStartTime());
         return parkingSpotDTO;
+    }
+
+    public List<ParkingSpotDTO> parkingSpotListToParkingSpotDTOList(List<ParkingSpot> allParkingSpots) {
+        return allParkingSpots.stream().map(this::parkingSpotToParkingSpotDTO).collect(Collectors.toList());
     }
 }

@@ -9,10 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.test.annotation.DirtiesContext;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -80,8 +77,12 @@ class DivisionControllerTest {
 
         divisionService.save(divisionMapper.createDivisionDTOToDivision(createDivisionDTO));
 
+        HttpHeaders header = new HttpHeaders();
+        header.set("userId","1");
+        HttpEntity<String> request = new HttpEntity<>(header);
+
         ResponseEntity<DivisionDTO[]> responseEntity = this.testRestTemplate
-                .getForEntity("http://localhost:" + port + "/divisions", DivisionDTO[].class);
+                .exchange("http://localhost:" + port + "/divisions", HttpMethod.GET, request, DivisionDTO[].class);
 
         assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
         assertEquals(sizeBeforeAdding + 1, divisionService.getAllDivisions().size());
