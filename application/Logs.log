@@ -6309,3 +6309,683 @@ java.lang.NumberFormatException: null
 2021-04-23 10:26:33.164  INFO 11032 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2021-04-23 10:26:33.164  INFO 11032 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
 2021-04-23 10:26:33.167  INFO 11032 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2021-04-23 11:01:34.120  INFO 8840 --- [main] c.s.s.c.ParkingSpotControllerTest        : Starting ParkingSpotControllerTest using Java 15.0.2 on DESKTOP-3LQVDCG with PID 8840 (started by pelin in C:\Users\pelin\IdeaProjects\spaceshark-parkshark\application)
+2021-04-23 11:01:34.123 DEBUG 8840 --- [main] c.s.s.c.ParkingSpotControllerTest        : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-04-23 11:01:34.126  INFO 8840 --- [main] c.s.s.c.ParkingSpotControllerTest        : No active profile set, falling back to default profiles: default
+2021-04-23 11:01:35.720  INFO 8840 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-23 11:01:35.994  INFO 8840 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 233 ms. Found 8 JPA repository interfaces.
+2021-04-23 11:01:38.144  INFO 8840 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-04-23 11:01:38.158  INFO 8840 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-23 11:01:38.159  INFO 8840 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-23 11:01:38.567  INFO 8840 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-23 11:01:38.570  INFO 8840 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4380 ms
+2021-04-23 11:01:39.347  INFO 8840 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-04-23 11:01:39.358  INFO 8840 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-23 11:01:40.539  INFO 8840 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-23 11:01:40.692  INFO 8840 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://database-2.cuvv0osxzgmi.eu-west-3.rds.amazonaws.com:5432/jeroen (PostgreSQL 12.5)
+2021-04-23 11:01:41.490  INFO 8840 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 7 migrations (execution time 00:00.433s)
+2021-04-23 11:01:41.789  INFO 8840 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "parkshark-test": 7
+2021-04-23 11:01:41.840  INFO 8840 --- [main] o.f.core.internal.command.DbMigrate      : Schema "parkshark-test" is up to date. No migration necessary.
+2021-04-23 11:01:42.864  INFO 8840 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-23 11:01:44.283  INFO 8840 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-04-23 11:01:45.166  INFO 8840 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-23 11:01:45.645  INFO 8840 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-04-23 11:01:48.532  INFO 8840 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-23 11:01:48.573  INFO 8840 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:01:59.167  INFO 8428 --- [main] c.s.s.c.ParkingSpotControllerTest        : Starting ParkingSpotControllerTest using Java 15.0.2 on DESKTOP-3LQVDCG with PID 8428 (started by pelin in C:\Users\pelin\IdeaProjects\spaceshark-parkshark\application)
+2021-04-23 11:01:59.169 DEBUG 8428 --- [main] c.s.s.c.ParkingSpotControllerTest        : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-04-23 11:01:59.170  INFO 8428 --- [main] c.s.s.c.ParkingSpotControllerTest        : No active profile set, falling back to default profiles: default
+2021-04-23 11:02:00.658  INFO 8428 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-23 11:02:00.943  INFO 8428 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 265 ms. Found 8 JPA repository interfaces.
+2021-04-23 11:02:02.729  INFO 8428 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-04-23 11:02:02.746  INFO 8428 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-23 11:02:02.747  INFO 8428 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-23 11:02:02.969  INFO 8428 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-23 11:02:02.970  INFO 8428 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3762 ms
+2021-04-23 11:02:03.474  INFO 8428 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-04-23 11:02:03.486  INFO 8428 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-23 11:02:04.334  INFO 8428 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-23 11:02:04.442  INFO 8428 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://database-2.cuvv0osxzgmi.eu-west-3.rds.amazonaws.com:5432/jeroen (PostgreSQL 12.5)
+2021-04-23 11:02:04.984  INFO 8428 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 7 migrations (execution time 00:00.203s)
+2021-04-23 11:02:05.260  INFO 8428 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "parkshark-test": 7
+2021-04-23 11:02:05.300  INFO 8428 --- [main] o.f.core.internal.command.DbMigrate      : Schema "parkshark-test" is up to date. No migration necessary.
+2021-04-23 11:02:05.815  INFO 8428 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-23 11:02:05.972  INFO 8428 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-04-23 11:02:06.485  INFO 8428 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-23 11:02:07.833  INFO 8428 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-04-23 11:02:10.626  INFO 8428 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-23 11:02:10.642  INFO 8428 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:02:12.434  WARN 8428 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-23 11:02:12.779  INFO 8428 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:02:15.210  INFO 8428 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 55514 (http) with context path ''
+2021-04-23 11:02:15.224  INFO 8428 --- [main] c.s.s.c.ParkingSpotControllerTest        : Started ParkingSpotControllerTest in 16.594 seconds (JVM running for 18.937)
+2021-04-23 11:02:15.270  INFO 8428 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:02:15.273  INFO 8428 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:02:15.299  INFO 8428 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-23 11:02:15.312  INFO 8428 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-23 11:02:15.368  INFO 8428 --- [main] c.s.s.c.ParkingSpotControllerTest        : Starting ParkingSpotControllerTest using Java 15.0.2 on DESKTOP-3LQVDCG with PID 8428 (started by pelin in C:\Users\pelin\IdeaProjects\spaceshark-parkshark\application)
+2021-04-23 11:02:15.369 DEBUG 8428 --- [main] c.s.s.c.ParkingSpotControllerTest        : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-04-23 11:02:15.369  INFO 8428 --- [main] c.s.s.c.ParkingSpotControllerTest        : No active profile set, falling back to default profiles: default
+2021-04-23 11:02:15.842  INFO 8428 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-23 11:02:15.918  INFO 8428 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 8 JPA repository interfaces.
+2021-04-23 11:02:16.331  INFO 8428 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-04-23 11:02:16.335  INFO 8428 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-23 11:02:16.335  INFO 8428 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-23 11:02:16.449  INFO 8428 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-23 11:02:16.449  INFO 8428 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1076 ms
+2021-04-23 11:02:16.865  INFO 8428 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-04-23 11:02:16.871  INFO 8428 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-04-23 11:02:17.273  INFO 8428 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-04-23 11:02:17.334  INFO 8428 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://database-2.cuvv0osxzgmi.eu-west-3.rds.amazonaws.com:5432/jeroen (PostgreSQL 12.5)
+2021-04-23 11:02:17.873  INFO 8428 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 7 migrations (execution time 00:00.175s)
+2021-04-23 11:02:18.150  INFO 8428 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "parkshark-test": 7
+2021-04-23 11:02:18.181  INFO 8428 --- [main] o.f.core.internal.command.DbMigrate      : Schema "parkshark-test" is up to date. No migration necessary.
+2021-04-23 11:02:18.302  INFO 8428 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-23 11:02:18.320  INFO 8428 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-04-23 11:02:18.815  INFO 8428 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-23 11:02:18.816  INFO 8428 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:02:19.303  WARN 8428 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-23 11:02:19.412  INFO 8428 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:02:20.393  INFO 8428 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 55530 (http) with context path ''
+2021-04-23 11:02:20.399  INFO 8428 --- [main] c.s.s.c.ParkingSpotControllerTest        : Started ParkingSpotControllerTest in 5.08 seconds (JVM running for 24.112)
+2021-04-23 11:02:21.997  INFO 8428 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:02:21.999  INFO 8428 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:02:22.002  INFO 8428 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2021-04-23 11:02:22.010  INFO 8428 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2021-04-23 11:03:09.420  INFO 1700 --- [main] c.s.s.c.ParkingSpotControllerTest        : Starting ParkingSpotControllerTest using Java 15.0.2 on DESKTOP-3LQVDCG with PID 1700 (started by pelin in C:\Users\pelin\IdeaProjects\spaceshark-parkshark\application)
+2021-04-23 11:03:09.423 DEBUG 1700 --- [main] c.s.s.c.ParkingSpotControllerTest        : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-04-23 11:03:09.426  INFO 1700 --- [main] c.s.s.c.ParkingSpotControllerTest        : No active profile set, falling back to default profiles: default
+2021-04-23 11:03:11.069  INFO 1700 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-23 11:03:11.303  INFO 1700 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 218 ms. Found 8 JPA repository interfaces.
+2021-04-23 11:03:13.017  INFO 1700 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-04-23 11:03:13.035  INFO 1700 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-23 11:03:13.036  INFO 1700 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-23 11:03:13.256  INFO 1700 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-23 11:03:13.256  INFO 1700 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3768 ms
+2021-04-23 11:03:13.990  INFO 1700 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-04-23 11:03:14.028  INFO 1700 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-23 11:03:15.006  INFO 1700 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-23 11:03:15.142  INFO 1700 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://database-2.cuvv0osxzgmi.eu-west-3.rds.amazonaws.com:5432/jeroen (PostgreSQL 12.5)
+2021-04-23 11:03:15.767  INFO 1700 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 7 migrations (execution time 00:00.226s)
+2021-04-23 11:03:16.073  INFO 1700 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "parkshark-test": 7
+2021-04-23 11:03:16.108  INFO 1700 --- [main] o.f.core.internal.command.DbMigrate      : Schema "parkshark-test" is up to date. No migration necessary.
+2021-04-23 11:03:16.761  INFO 1700 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-23 11:03:17.010  INFO 1700 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-04-23 11:03:17.492  INFO 1700 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-23 11:03:18.083  INFO 1700 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-04-23 11:03:21.333  INFO 1700 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-23 11:03:21.368  INFO 1700 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:03:24.219  WARN 1700 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-23 11:03:24.854  INFO 1700 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:03:27.980  INFO 1700 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 55567 (http) with context path ''
+2021-04-23 11:03:28.013  INFO 1700 --- [main] c.s.s.c.ParkingSpotControllerTest        : Started ParkingSpotControllerTest in 19.278 seconds (JVM running for 22.105)
+2021-04-23 11:03:28.096  INFO 1700 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:03:28.101  INFO 1700 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:03:28.129  INFO 1700 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-23 11:03:28.143  INFO 1700 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-23 11:03:28.297  INFO 1700 --- [main] c.s.s.c.ParkingSpotControllerTest        : Starting ParkingSpotControllerTest using Java 15.0.2 on DESKTOP-3LQVDCG with PID 1700 (started by pelin in C:\Users\pelin\IdeaProjects\spaceshark-parkshark\application)
+2021-04-23 11:03:28.298 DEBUG 1700 --- [main] c.s.s.c.ParkingSpotControllerTest        : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-04-23 11:03:28.299  INFO 1700 --- [main] c.s.s.c.ParkingSpotControllerTest        : No active profile set, falling back to default profiles: default
+2021-04-23 11:03:28.984  INFO 1700 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-23 11:03:29.074  INFO 1700 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 8 JPA repository interfaces.
+2021-04-23 11:03:29.578  INFO 1700 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-04-23 11:03:29.582  INFO 1700 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-23 11:03:29.583  INFO 1700 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-23 11:03:29.634  INFO 1700 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-23 11:03:29.635  INFO 1700 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1332 ms
+2021-04-23 11:03:29.909  INFO 1700 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-04-23 11:03:29.914  INFO 1700 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-04-23 11:03:30.393  INFO 1700 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-04-23 11:03:30.486  INFO 1700 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://database-2.cuvv0osxzgmi.eu-west-3.rds.amazonaws.com:5432/jeroen (PostgreSQL 12.5)
+2021-04-23 11:03:31.039  INFO 1700 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 7 migrations (execution time 00:00.162s)
+2021-04-23 11:03:31.372  INFO 1700 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "parkshark-test": 7
+2021-04-23 11:03:31.412  INFO 1700 --- [main] o.f.core.internal.command.DbMigrate      : Schema "parkshark-test" is up to date. No migration necessary.
+2021-04-23 11:03:31.579  INFO 1700 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-23 11:03:31.610  INFO 1700 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-04-23 11:03:32.205  INFO 1700 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-23 11:03:32.209  INFO 1700 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:03:32.910  WARN 1700 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-23 11:03:33.094  INFO 1700 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:03:34.401  INFO 1700 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 55583 (http) with context path ''
+2021-04-23 11:03:34.414  INFO 1700 --- [main] c.s.s.c.ParkingSpotControllerTest        : Started ParkingSpotControllerTest in 6.267 seconds (JVM running for 28.507)
+2021-04-23 11:03:35.329  INFO 1700 --- [main] c.s.spaceshark.service.MemberService     : Creating a Member.Member{id=100, firstName='name', lastName='last name', memberAddress=com.switchfully.spaceshark.model.addresses.Address@69780093, phoneNumber='+12345678615', email='test2@test.com', licencePlate='DC 12 456', registrationDate=2021-04-23}
+2021-04-23 11:03:36.716  INFO 1700 --- [http-nio-auto-2-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-23 11:03:36.718  INFO 1700 --- [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-23 11:03:36.719  INFO 1700 --- [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-04-23 11:03:36.865  INFO 1700 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:03:36.869  INFO 1700 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:03:36.870  INFO 1700 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2021-04-23 11:03:36.875  INFO 1700 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2021-04-23 11:04:27.018  INFO 1812 --- [main] c.s.s.c.ParkingSpotControllerTest        : Starting ParkingSpotControllerTest using Java 15.0.2 on DESKTOP-3LQVDCG with PID 1812 (started by pelin in C:\Users\pelin\IdeaProjects\spaceshark-parkshark\application)
+2021-04-23 11:04:27.022 DEBUG 1812 --- [main] c.s.s.c.ParkingSpotControllerTest        : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-04-23 11:04:27.030  INFO 1812 --- [main] c.s.s.c.ParkingSpotControllerTest        : No active profile set, falling back to default profiles: default
+2021-04-23 11:04:28.803  INFO 1812 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-23 11:04:29.061  INFO 1812 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 238 ms. Found 8 JPA repository interfaces.
+2021-04-23 11:04:31.279  INFO 1812 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-04-23 11:04:31.294  INFO 1812 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-23 11:04:31.294  INFO 1812 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-23 11:04:31.616  INFO 1812 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-23 11:04:31.616  INFO 1812 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4471 ms
+2021-04-23 11:04:32.211  INFO 1812 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-04-23 11:04:32.241  INFO 1812 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-23 11:04:33.179  INFO 1812 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-23 11:04:33.319  INFO 1812 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://database-2.cuvv0osxzgmi.eu-west-3.rds.amazonaws.com:5432/jeroen (PostgreSQL 12.5)
+2021-04-23 11:04:33.847  INFO 1812 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 7 migrations (execution time 00:00.199s)
+2021-04-23 11:04:34.120  INFO 1812 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "parkshark-test": 7
+2021-04-23 11:04:34.152  INFO 1812 --- [main] o.f.core.internal.command.DbMigrate      : Schema "parkshark-test" is up to date. No migration necessary.
+2021-04-23 11:04:34.917  INFO 1812 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-23 11:04:35.046  INFO 1812 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-04-23 11:04:35.569  INFO 1812 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-23 11:04:35.934  INFO 1812 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-04-23 11:04:38.168  INFO 1812 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-23 11:04:38.203  INFO 1812 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:04:42.395  WARN 1812 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-23 11:04:43.834  INFO 1812 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:04:51.523  INFO 1812 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 55611 (http) with context path ''
+2021-04-23 11:04:51.553  INFO 1812 --- [main] c.s.s.c.ParkingSpotControllerTest        : Started ParkingSpotControllerTest in 25.296 seconds (JVM running for 28.783)
+2021-04-23 11:04:51.739  INFO 1812 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:04:51.751  INFO 1812 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:04:51.773  INFO 1812 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-23 11:04:51.838  INFO 1812 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-23 11:04:52.059  INFO 1812 --- [main] c.s.s.c.ParkingSpotControllerTest        : Starting ParkingSpotControllerTest using Java 15.0.2 on DESKTOP-3LQVDCG with PID 1812 (started by pelin in C:\Users\pelin\IdeaProjects\spaceshark-parkshark\application)
+2021-04-23 11:04:52.059 DEBUG 1812 --- [main] c.s.s.c.ParkingSpotControllerTest        : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-04-23 11:04:52.063  INFO 1812 --- [main] c.s.s.c.ParkingSpotControllerTest        : No active profile set, falling back to default profiles: default
+2021-04-23 11:04:53.282  INFO 1812 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-23 11:04:53.449  INFO 1812 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 165 ms. Found 8 JPA repository interfaces.
+2021-04-23 11:04:53.972  INFO 1812 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-04-23 11:04:53.976  INFO 1812 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-23 11:04:53.976  INFO 1812 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-23 11:04:54.035  INFO 1812 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-23 11:04:54.036  INFO 1812 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1963 ms
+2021-04-23 11:04:54.246  INFO 1812 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-04-23 11:04:54.252  INFO 1812 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-04-23 11:04:54.713  INFO 1812 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-04-23 11:04:54.840  INFO 1812 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://database-2.cuvv0osxzgmi.eu-west-3.rds.amazonaws.com:5432/jeroen (PostgreSQL 12.5)
+2021-04-23 11:04:55.491  INFO 1812 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 7 migrations (execution time 00:00.198s)
+2021-04-23 11:04:55.879  INFO 1812 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "parkshark-test": 7
+2021-04-23 11:04:55.909  INFO 1812 --- [main] o.f.core.internal.command.DbMigrate      : Schema "parkshark-test" is up to date. No migration necessary.
+2021-04-23 11:04:56.102  INFO 1812 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-23 11:04:56.169  INFO 1812 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-04-23 11:04:56.852  INFO 1812 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-23 11:04:56.853  INFO 1812 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:04:58.722  WARN 1812 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-23 11:04:59.396  INFO 1812 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:05:01.694  INFO 1812 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 55629 (http) with context path ''
+2021-04-23 11:05:01.699  INFO 1812 --- [main] c.s.s.c.ParkingSpotControllerTest        : Started ParkingSpotControllerTest in 9.854 seconds (JVM running for 38.929)
+2021-04-23 11:05:02.509  INFO 1812 --- [main] c.s.spaceshark.service.MemberService     : Creating a Member.Member{id=101, firstName='name', lastName='last name', memberAddress=com.switchfully.spaceshark.model.addresses.Address@21298c3a, phoneNumber='+12345678615', email='test2@test.com', licencePlate='DC 12 456', registrationDate=2021-04-23}
+2021-04-23 11:05:04.056  INFO 1812 --- [http-nio-auto-2-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-23 11:05:04.058  INFO 1812 --- [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-23 11:05:04.061  INFO 1812 --- [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-04-23 11:05:21.185  INFO 14184 --- [main] c.s.s.c.ParkingSpotControllerTest        : Starting ParkingSpotControllerTest using Java 15.0.2 on DESKTOP-3LQVDCG with PID 14184 (started by pelin in C:\Users\pelin\IdeaProjects\spaceshark-parkshark\application)
+2021-04-23 11:05:21.186 DEBUG 14184 --- [main] c.s.s.c.ParkingSpotControllerTest        : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-04-23 11:05:21.190  INFO 14184 --- [main] c.s.s.c.ParkingSpotControllerTest        : No active profile set, falling back to default profiles: default
+2021-04-23 11:05:22.400  INFO 14184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-23 11:05:22.635  INFO 14184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 219 ms. Found 8 JPA repository interfaces.
+2021-04-23 11:05:23.866  INFO 14184 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-04-23 11:05:23.881  INFO 14184 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-23 11:05:23.882  INFO 14184 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-23 11:05:24.061  INFO 14184 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-23 11:05:24.061  INFO 14184 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2822 ms
+2021-04-23 11:05:24.416  INFO 14184 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-04-23 11:05:24.427  INFO 14184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-23 11:05:25.173  INFO 14184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-23 11:05:25.275  INFO 14184 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://database-2.cuvv0osxzgmi.eu-west-3.rds.amazonaws.com:5432/jeroen (PostgreSQL 12.5)
+2021-04-23 11:05:25.824  INFO 14184 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 7 migrations (execution time 00:00.225s)
+2021-04-23 11:05:26.086  INFO 14184 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "parkshark-test": 7
+2021-04-23 11:05:26.114  INFO 14184 --- [main] o.f.core.internal.command.DbMigrate      : Schema "parkshark-test" is up to date. No migration necessary.
+2021-04-23 11:05:26.451  INFO 14184 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-23 11:05:26.557  INFO 14184 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-04-23 11:05:26.837  INFO 14184 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-23 11:05:27.121  INFO 14184 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-04-23 11:05:28.619  INFO 14184 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-23 11:05:28.635  INFO 14184 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:05:29.894  WARN 14184 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-23 11:05:30.176  INFO 14184 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:05:32.328  INFO 14184 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 55651 (http) with context path ''
+2021-04-23 11:05:32.342  INFO 14184 --- [main] c.s.s.c.ParkingSpotControllerTest        : Started ParkingSpotControllerTest in 11.639 seconds (JVM running for 13.978)
+2021-04-23 11:05:32.385  INFO 14184 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:05:32.388  INFO 14184 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:05:32.391  INFO 14184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-23 11:05:32.398  INFO 14184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-23 11:05:32.460  INFO 14184 --- [main] c.s.s.c.ParkingSpotControllerTest        : Starting ParkingSpotControllerTest using Java 15.0.2 on DESKTOP-3LQVDCG with PID 14184 (started by pelin in C:\Users\pelin\IdeaProjects\spaceshark-parkshark\application)
+2021-04-23 11:05:32.461 DEBUG 14184 --- [main] c.s.s.c.ParkingSpotControllerTest        : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-04-23 11:05:32.463  INFO 14184 --- [main] c.s.s.c.ParkingSpotControllerTest        : No active profile set, falling back to default profiles: default
+2021-04-23 11:05:32.879  INFO 14184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-23 11:05:32.944  INFO 14184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 8 JPA repository interfaces.
+2021-04-23 11:05:33.227  INFO 14184 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-04-23 11:05:33.229  INFO 14184 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-23 11:05:33.229  INFO 14184 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-23 11:05:33.271  INFO 14184 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-23 11:05:33.272  INFO 14184 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 803 ms
+2021-04-23 11:05:33.473  INFO 14184 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-04-23 11:05:33.477  INFO 14184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-04-23 11:05:33.836  INFO 14184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-04-23 11:05:33.896  INFO 14184 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://database-2.cuvv0osxzgmi.eu-west-3.rds.amazonaws.com:5432/jeroen (PostgreSQL 12.5)
+2021-04-23 11:05:34.361  INFO 14184 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 7 migrations (execution time 00:00.159s)
+2021-04-23 11:05:34.627  INFO 14184 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "parkshark-test": 7
+2021-04-23 11:05:34.657  INFO 14184 --- [main] o.f.core.internal.command.DbMigrate      : Schema "parkshark-test" is up to date. No migration necessary.
+2021-04-23 11:05:34.798  INFO 14184 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-23 11:05:34.819  INFO 14184 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-04-23 11:05:35.242  INFO 14184 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-23 11:05:35.243  INFO 14184 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:05:35.722  WARN 14184 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-23 11:05:35.838  INFO 14184 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:05:36.797  INFO 14184 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 55667 (http) with context path ''
+2021-04-23 11:05:36.809  INFO 14184 --- [main] c.s.s.c.ParkingSpotControllerTest        : Started ParkingSpotControllerTest in 4.407 seconds (JVM running for 18.445)
+2021-04-23 11:05:37.495  INFO 14184 --- [main] c.s.spaceshark.service.MemberService     : Creating a Member.Member{id=102, firstName='name', lastName='last name', memberAddress=com.switchfully.spaceshark.model.addresses.Address@65448932, phoneNumber='+12345678615', email='test2@test.com', licencePlate='DC 12 456', registrationDate=2021-04-23}
+2021-04-23 11:05:38.735  INFO 14184 --- [http-nio-auto-2-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-23 11:05:38.735  INFO 14184 --- [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-23 11:05:38.737  INFO 14184 --- [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-23 11:05:38.849  INFO 14184 --- [http-nio-auto-2-exec-1] c.s.s.controllers.ParkingSpotController  : Getting all the parking spots
+2021-04-23 11:05:38.858 ERROR 14184 --- [http-nio-auto-2-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because "limit" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because "limit" is null
+	at com.switchfully.spaceshark.controllers.ParkingSpotController.getAllParkingSpots(ParkingSpotController.java:50) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.45.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.45.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2021-04-23 11:05:39.100  INFO 14184 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:05:39.101  INFO 14184 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:05:39.102  INFO 14184 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2021-04-23 11:05:39.106  INFO 14184 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2021-04-23 11:07:55.831  INFO 5284 --- [main] c.s.s.c.ParkingSpotControllerTest        : Starting ParkingSpotControllerTest using Java 15.0.2 on DESKTOP-3LQVDCG with PID 5284 (started by pelin in C:\Users\pelin\IdeaProjects\spaceshark-parkshark\application)
+2021-04-23 11:07:55.832 DEBUG 5284 --- [main] c.s.s.c.ParkingSpotControllerTest        : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-04-23 11:07:55.834  INFO 5284 --- [main] c.s.s.c.ParkingSpotControllerTest        : No active profile set, falling back to default profiles: default
+2021-04-23 11:07:57.451  INFO 5284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-23 11:07:57.703  INFO 5284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 232 ms. Found 8 JPA repository interfaces.
+2021-04-23 11:07:59.292  INFO 5284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-04-23 11:07:59.315  INFO 5284 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-23 11:07:59.322  INFO 5284 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-23 11:07:59.529  INFO 5284 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-23 11:07:59.530  INFO 5284 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3615 ms
+2021-04-23 11:08:00.173  INFO 5284 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-04-23 11:08:00.185  INFO 5284 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-23 11:08:00.971  INFO 5284 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-23 11:08:01.098  INFO 5284 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://database-2.cuvv0osxzgmi.eu-west-3.rds.amazonaws.com:5432/jeroen (PostgreSQL 12.5)
+2021-04-23 11:08:01.584  INFO 5284 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 7 migrations (execution time 00:00.170s)
+2021-04-23 11:08:01.866  INFO 5284 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "parkshark-test": 7
+2021-04-23 11:08:01.896  INFO 5284 --- [main] o.f.core.internal.command.DbMigrate      : Schema "parkshark-test" is up to date. No migration necessary.
+2021-04-23 11:08:02.498  INFO 5284 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-23 11:08:02.644  INFO 5284 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-04-23 11:08:03.062  INFO 5284 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-23 11:08:03.481  INFO 5284 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-04-23 11:08:05.238  INFO 5284 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-23 11:08:05.254  INFO 5284 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:08:07.201  WARN 5284 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-23 11:08:07.749  INFO 5284 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:08:11.924  INFO 5284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 55695 (http) with context path ''
+2021-04-23 11:08:11.938  INFO 5284 --- [main] c.s.s.c.ParkingSpotControllerTest        : Started ParkingSpotControllerTest in 16.775 seconds (JVM running for 19.654)
+2021-04-23 11:08:11.998  INFO 5284 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:08:12.029  INFO 5284 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:08:12.075  INFO 5284 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-23 11:08:12.086  INFO 5284 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-23 11:08:12.182  INFO 5284 --- [main] c.s.s.c.ParkingSpotControllerTest        : Starting ParkingSpotControllerTest using Java 15.0.2 on DESKTOP-3LQVDCG with PID 5284 (started by pelin in C:\Users\pelin\IdeaProjects\spaceshark-parkshark\application)
+2021-04-23 11:08:12.182 DEBUG 5284 --- [main] c.s.s.c.ParkingSpotControllerTest        : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-04-23 11:08:12.183  INFO 5284 --- [main] c.s.s.c.ParkingSpotControllerTest        : No active profile set, falling back to default profiles: default
+2021-04-23 11:08:12.854  INFO 5284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-23 11:08:12.966  INFO 5284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 111 ms. Found 8 JPA repository interfaces.
+2021-04-23 11:08:13.680  INFO 5284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-04-23 11:08:13.691  INFO 5284 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-23 11:08:13.692  INFO 5284 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-23 11:08:13.752  INFO 5284 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-23 11:08:13.756  INFO 5284 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1567 ms
+2021-04-23 11:08:14.104  INFO 5284 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-04-23 11:08:14.106  INFO 5284 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-04-23 11:08:14.505  INFO 5284 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-04-23 11:08:14.578  INFO 5284 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://database-2.cuvv0osxzgmi.eu-west-3.rds.amazonaws.com:5432/jeroen (PostgreSQL 12.5)
+2021-04-23 11:08:15.056  INFO 5284 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 7 migrations (execution time 00:00.157s)
+2021-04-23 11:08:15.299  INFO 5284 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "parkshark-test": 7
+2021-04-23 11:08:15.331  INFO 5284 --- [main] o.f.core.internal.command.DbMigrate      : Schema "parkshark-test" is up to date. No migration necessary.
+2021-04-23 11:08:15.498  INFO 5284 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-23 11:08:15.565  INFO 5284 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-04-23 11:08:16.103  INFO 5284 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-23 11:08:16.104  INFO 5284 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:08:16.785  WARN 5284 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-23 11:08:16.941  INFO 5284 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:08:18.257  INFO 5284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 55713 (http) with context path ''
+2021-04-23 11:08:18.265  INFO 5284 --- [main] c.s.s.c.ParkingSpotControllerTest        : Started ParkingSpotControllerTest in 6.175 seconds (JVM running for 25.98)
+2021-04-23 11:08:19.009  INFO 5284 --- [main] c.s.spaceshark.service.MemberService     : Creating a Member.Member{id=103, firstName='name', lastName='last name', memberAddress=com.switchfully.spaceshark.model.addresses.Address@5ec75178, phoneNumber='+12345678615', email='test2@test.com', licencePlate='DC 12 456', registrationDate=2021-04-23}
+2021-04-23 11:08:20.341  INFO 5284 --- [http-nio-auto-2-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-23 11:08:20.341  INFO 5284 --- [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-23 11:08:20.342  INFO 5284 --- [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-23 11:08:20.453  INFO 5284 --- [http-nio-auto-2-exec-1] c.s.s.controllers.ParkingSpotController  : Getting all the parking spots
+2021-04-23 11:08:20.460 ERROR 5284 --- [http-nio-auto-2-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because "limit" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because "limit" is null
+	at com.switchfully.spaceshark.controllers.ParkingSpotController.getAllParkingSpots(ParkingSpotController.java:50) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.45.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.45.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2021-04-23 11:08:20.716  INFO 5284 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:08:20.719  INFO 5284 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:08:20.720  INFO 5284 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2021-04-23 11:08:20.724  INFO 5284 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2021-04-23 11:09:08.072  INFO 6076 --- [main] c.s.s.c.ParkingSpotControllerTest        : Starting ParkingSpotControllerTest using Java 15.0.2 on DESKTOP-3LQVDCG with PID 6076 (started by pelin in C:\Users\pelin\IdeaProjects\spaceshark-parkshark\application)
+2021-04-23 11:09:08.075 DEBUG 6076 --- [main] c.s.s.c.ParkingSpotControllerTest        : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-04-23 11:09:08.090  INFO 6076 --- [main] c.s.s.c.ParkingSpotControllerTest        : No active profile set, falling back to default profiles: default
+2021-04-23 11:09:10.180  INFO 6076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-23 11:09:10.971  INFO 6076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 468 ms. Found 8 JPA repository interfaces.
+2021-04-23 11:09:14.639  INFO 6076 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-04-23 11:09:14.658  INFO 6076 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-23 11:09:14.659  INFO 6076 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-23 11:09:15.101  INFO 6076 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-23 11:09:15.102  INFO 6076 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6942 ms
+2021-04-23 11:09:16.365  INFO 6076 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-04-23 11:09:16.375  INFO 6076 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-23 11:09:17.177  INFO 6076 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-23 11:09:17.290  INFO 6076 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://database-2.cuvv0osxzgmi.eu-west-3.rds.amazonaws.com:5432/jeroen (PostgreSQL 12.5)
+2021-04-23 11:09:17.838  INFO 6076 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 7 migrations (execution time 00:00.213s)
+2021-04-23 11:09:18.088  INFO 6076 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "parkshark-test": 7
+2021-04-23 11:09:18.124  INFO 6076 --- [main] o.f.core.internal.command.DbMigrate      : Schema "parkshark-test" is up to date. No migration necessary.
+2021-04-23 11:09:18.870  INFO 6076 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-23 11:09:19.346  INFO 6076 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-04-23 11:09:20.397  INFO 6076 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-23 11:09:21.075  INFO 6076 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-04-23 11:09:22.870  INFO 6076 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-23 11:09:22.901  INFO 6076 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:09:25.121  WARN 6076 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-23 11:09:25.641  INFO 6076 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:09:28.744  INFO 6076 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 55754 (http) with context path ''
+2021-04-23 11:09:28.772  INFO 6076 --- [main] c.s.s.c.ParkingSpotControllerTest        : Started ParkingSpotControllerTest in 21.655 seconds (JVM running for 25.297)
+2021-04-23 11:09:28.871  INFO 6076 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:09:28.882  INFO 6076 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:09:28.886  INFO 6076 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-23 11:09:29.190  INFO 6076 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-23 11:09:29.279  INFO 6076 --- [main] c.s.s.c.ParkingSpotControllerTest        : Starting ParkingSpotControllerTest using Java 15.0.2 on DESKTOP-3LQVDCG with PID 6076 (started by pelin in C:\Users\pelin\IdeaProjects\spaceshark-parkshark\application)
+2021-04-23 11:09:29.280 DEBUG 6076 --- [main] c.s.s.c.ParkingSpotControllerTest        : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-04-23 11:09:29.281  INFO 6076 --- [main] c.s.s.c.ParkingSpotControllerTest        : No active profile set, falling back to default profiles: default
+2021-04-23 11:09:30.002  INFO 6076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-23 11:09:30.164  INFO 6076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 161 ms. Found 8 JPA repository interfaces.
+2021-04-23 11:09:30.621  INFO 6076 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-04-23 11:09:30.623  INFO 6076 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-23 11:09:30.624  INFO 6076 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-23 11:09:30.712  INFO 6076 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-23 11:09:30.713  INFO 6076 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1426 ms
+2021-04-23 11:09:30.974  INFO 6076 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-04-23 11:09:30.985  INFO 6076 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-04-23 11:09:31.449  INFO 6076 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-04-23 11:09:31.525  INFO 6076 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://database-2.cuvv0osxzgmi.eu-west-3.rds.amazonaws.com:5432/jeroen (PostgreSQL 12.5)
+2021-04-23 11:09:32.006  INFO 6076 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 7 migrations (execution time 00:00.174s)
+2021-04-23 11:09:32.231  INFO 6076 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "parkshark-test": 7
+2021-04-23 11:09:32.260  INFO 6076 --- [main] o.f.core.internal.command.DbMigrate      : Schema "parkshark-test" is up to date. No migration necessary.
+2021-04-23 11:09:32.395  INFO 6076 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-23 11:09:32.472  INFO 6076 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-04-23 11:09:33.127  INFO 6076 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-23 11:09:33.128  INFO 6076 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:09:33.990  WARN 6076 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-23 11:09:34.166  INFO 6076 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:09:35.499  INFO 6076 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 55771 (http) with context path ''
+2021-04-23 11:09:35.504  INFO 6076 --- [main] c.s.s.c.ParkingSpotControllerTest        : Started ParkingSpotControllerTest in 6.308 seconds (JVM running for 32.028)
+2021-04-23 11:09:36.200  INFO 6076 --- [main] c.s.spaceshark.service.MemberService     : Creating a Member.Member{id=104, firstName='name', lastName='last name', memberAddress=com.switchfully.spaceshark.model.addresses.Address@41f274d, phoneNumber='+12345678615', email='test2@test.com', licencePlate='DC 12 456', registrationDate=2021-04-23}
+2021-04-23 11:09:37.606  INFO 6076 --- [http-nio-auto-2-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-23 11:09:37.606  INFO 6076 --- [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-23 11:09:37.608  INFO 6076 --- [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-23 11:09:37.751  INFO 6076 --- [http-nio-auto-2-exec-1] c.s.s.controllers.ParkingSpotController  : Getting all the parking spots
+2021-04-23 11:09:37.759 ERROR 6076 --- [http-nio-auto-2-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because "limit" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because "limit" is null
+	at com.switchfully.spaceshark.controllers.ParkingSpotController.getAllParkingSpots(ParkingSpotController.java:50) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.45.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.45.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2021-04-23 11:09:38.075  INFO 6076 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:09:38.080  INFO 6076 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:09:38.088  INFO 6076 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2021-04-23 11:09:38.110  INFO 6076 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2021-04-23 11:12:11.242  INFO 7248 --- [main] c.s.s.c.ParkingSpotControllerTest        : Starting ParkingSpotControllerTest using Java 15.0.2 on DESKTOP-3LQVDCG with PID 7248 (started by pelin in C:\Users\pelin\IdeaProjects\spaceshark-parkshark\application)
+2021-04-23 11:12:11.245 DEBUG 7248 --- [main] c.s.s.c.ParkingSpotControllerTest        : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-04-23 11:12:11.255  INFO 7248 --- [main] c.s.s.c.ParkingSpotControllerTest        : No active profile set, falling back to default profiles: default
+2021-04-23 11:12:12.600  INFO 7248 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-23 11:12:12.766  INFO 7248 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 153 ms. Found 8 JPA repository interfaces.
+2021-04-23 11:12:14.340  INFO 7248 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-04-23 11:12:14.357  INFO 7248 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-23 11:12:14.360  INFO 7248 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-23 11:12:14.546  INFO 7248 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-23 11:12:14.549  INFO 7248 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3227 ms
+2021-04-23 11:12:14.937  INFO 7248 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-04-23 11:12:14.954  INFO 7248 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-23 11:12:15.701  INFO 7248 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-23 11:12:15.806  INFO 7248 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://database-2.cuvv0osxzgmi.eu-west-3.rds.amazonaws.com:5432/jeroen (PostgreSQL 12.5)
+2021-04-23 11:12:16.312  INFO 7248 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 7 migrations (execution time 00:00.180s)
+2021-04-23 11:12:16.603  INFO 7248 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "parkshark-test": 7
+2021-04-23 11:12:16.634  INFO 7248 --- [main] o.f.core.internal.command.DbMigrate      : Schema "parkshark-test" is up to date. No migration necessary.
+2021-04-23 11:12:16.946  INFO 7248 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-23 11:12:17.048  INFO 7248 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-04-23 11:12:17.335  INFO 7248 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-23 11:12:17.643  INFO 7248 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-04-23 11:12:19.239  INFO 7248 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-23 11:12:19.256  INFO 7248 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:12:20.396  WARN 7248 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-23 11:12:20.638  INFO 7248 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:12:22.997  INFO 7248 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 55816 (http) with context path ''
+2021-04-23 11:12:23.011  INFO 7248 --- [main] c.s.s.c.ParkingSpotControllerTest        : Started ParkingSpotControllerTest in 12.485 seconds (JVM running for 14.772)
+2021-04-23 11:12:23.055  INFO 7248 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:12:23.060  INFO 7248 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:12:23.064  INFO 7248 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-23 11:12:23.071  INFO 7248 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-23 11:12:23.145  INFO 7248 --- [main] c.s.s.c.ParkingSpotControllerTest        : Starting ParkingSpotControllerTest using Java 15.0.2 on DESKTOP-3LQVDCG with PID 7248 (started by pelin in C:\Users\pelin\IdeaProjects\spaceshark-parkshark\application)
+2021-04-23 11:12:23.146 DEBUG 7248 --- [main] c.s.s.c.ParkingSpotControllerTest        : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-04-23 11:12:23.147  INFO 7248 --- [main] c.s.s.c.ParkingSpotControllerTest        : No active profile set, falling back to default profiles: default
+2021-04-23 11:12:23.537  INFO 7248 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-23 11:12:23.597  INFO 7248 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 8 JPA repository interfaces.
+2021-04-23 11:12:24.092  INFO 7248 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-04-23 11:12:24.102  INFO 7248 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-23 11:12:24.103  INFO 7248 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-04-23 11:12:24.253  INFO 7248 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-23 11:12:24.254  INFO 7248 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1103 ms
+2021-04-23 11:12:24.660  INFO 7248 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-04-23 11:12:24.663  INFO 7248 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-04-23 11:12:25.035  INFO 7248 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-04-23 11:12:25.109  INFO 7248 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:postgresql://database-2.cuvv0osxzgmi.eu-west-3.rds.amazonaws.com:5432/jeroen (PostgreSQL 12.5)
+2021-04-23 11:12:25.562  INFO 7248 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 7 migrations (execution time 00:00.143s)
+2021-04-23 11:12:25.786  INFO 7248 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "parkshark-test": 7
+2021-04-23 11:12:25.817  INFO 7248 --- [main] o.f.core.internal.command.DbMigrate      : Schema "parkshark-test" is up to date. No migration necessary.
+2021-04-23 11:12:26.070  INFO 7248 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-23 11:12:26.121  INFO 7248 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-04-23 11:12:26.707  INFO 7248 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-23 11:12:26.709  INFO 7248 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:12:27.525  WARN 7248 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-23 11:12:27.805  INFO 7248 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:12:29.144  INFO 7248 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 55832 (http) with context path ''
+2021-04-23 11:12:29.154  INFO 7248 --- [main] c.s.s.c.ParkingSpotControllerTest        : Started ParkingSpotControllerTest in 6.08 seconds (JVM running for 20.916)
+2021-04-23 11:12:30.176  INFO 7248 --- [main] c.s.spaceshark.service.MemberService     : Creating a Member.Member{id=105, firstName='name', lastName='last name', memberAddress=com.switchfully.spaceshark.model.addresses.Address@348c00d9, phoneNumber='+12345678615', email='test2@test.com', licencePlate='DC 12 456', registrationDate=2021-04-23}
+2021-04-23 11:12:31.606  INFO 7248 --- [http-nio-auto-2-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-23 11:12:31.606  INFO 7248 --- [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-23 11:12:31.607  INFO 7248 --- [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-23 11:12:31.719  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.s.controllers.ParkingSpotController  : Getting all the parking spots
+2021-04-23 11:12:32.759  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting a Member to a MemberDto, return a MemberDto.
+2021-04-23 11:12:32.759  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting an Address to an AddressDto, return a AddressDto.
+2021-04-23 11:12:32.759  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting PostalCode to a PostalCodeDto, return a PostalCodeDto.
+2021-04-23 11:12:32.760  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting a Member to a MemberDto, return a MemberDto.
+2021-04-23 11:12:32.760  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting an Address to an AddressDto, return a AddressDto.
+2021-04-23 11:12:32.761  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting PostalCode to a PostalCodeDto, return a PostalCodeDto.
+2021-04-23 11:12:32.761  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting a Member to a MemberDto, return a MemberDto.
+2021-04-23 11:12:32.761  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting an Address to an AddressDto, return a AddressDto.
+2021-04-23 11:12:32.761  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting PostalCode to a PostalCodeDto, return a PostalCodeDto.
+2021-04-23 11:12:32.761  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting a Member to a MemberDto, return a MemberDto.
+2021-04-23 11:12:32.761  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting an Address to an AddressDto, return a AddressDto.
+2021-04-23 11:12:32.761  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting PostalCode to a PostalCodeDto, return a PostalCodeDto.
+2021-04-23 11:12:32.761  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting a Member to a MemberDto, return a MemberDto.
+2021-04-23 11:12:32.761  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting an Address to an AddressDto, return a AddressDto.
+2021-04-23 11:12:32.761  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting PostalCode to a PostalCodeDto, return a PostalCodeDto.
+2021-04-23 11:12:32.761  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting a Member to a MemberDto, return a MemberDto.
+2021-04-23 11:12:32.761  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting an Address to an AddressDto, return a AddressDto.
+2021-04-23 11:12:32.761  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting PostalCode to a PostalCodeDto, return a PostalCodeDto.
+2021-04-23 11:12:32.762  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting a Member to a MemberDto, return a MemberDto.
+2021-04-23 11:12:32.762  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting an Address to an AddressDto, return a AddressDto.
+2021-04-23 11:12:32.762  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting PostalCode to a PostalCodeDto, return a PostalCodeDto.
+2021-04-23 11:12:32.762  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting a Member to a MemberDto, return a MemberDto.
+2021-04-23 11:12:32.762  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting an Address to an AddressDto, return a AddressDto.
+2021-04-23 11:12:32.762  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting PostalCode to a PostalCodeDto, return a PostalCodeDto.
+2021-04-23 11:12:32.762  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting a Member to a MemberDto, return a MemberDto.
+2021-04-23 11:12:32.762  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting an Address to an AddressDto, return a AddressDto.
+2021-04-23 11:12:32.762  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting PostalCode to a PostalCodeDto, return a PostalCodeDto.
+2021-04-23 11:12:32.762  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting a Member to a MemberDto, return a MemberDto.
+2021-04-23 11:12:32.762  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting an Address to an AddressDto, return a AddressDto.
+2021-04-23 11:12:32.762  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting PostalCode to a PostalCodeDto, return a PostalCodeDto.
+2021-04-23 11:12:32.762  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting a Member to a MemberDto, return a MemberDto.
+2021-04-23 11:12:32.762  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting an Address to an AddressDto, return a AddressDto.
+2021-04-23 11:12:32.762  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting PostalCode to a PostalCodeDto, return a PostalCodeDto.
+2021-04-23 11:12:32.763  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting a Member to a MemberDto, return a MemberDto.
+2021-04-23 11:12:32.763  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting an Address to an AddressDto, return a AddressDto.
+2021-04-23 11:12:32.763  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting PostalCode to a PostalCodeDto, return a PostalCodeDto.
+2021-04-23 11:12:32.763  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting a Member to a MemberDto, return a MemberDto.
+2021-04-23 11:12:32.763  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting an Address to an AddressDto, return a AddressDto.
+2021-04-23 11:12:32.764  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting PostalCode to a PostalCodeDto, return a PostalCodeDto.
+2021-04-23 11:12:32.764  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting a Member to a MemberDto, return a MemberDto.
+2021-04-23 11:12:32.764  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting an Address to an AddressDto, return a AddressDto.
+2021-04-23 11:12:32.764  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting PostalCode to a PostalCodeDto, return a PostalCodeDto.
+2021-04-23 11:12:32.764  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting a Member to a MemberDto, return a MemberDto.
+2021-04-23 11:12:32.764  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting an Address to an AddressDto, return a AddressDto.
+2021-04-23 11:12:32.764  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting PostalCode to a PostalCodeDto, return a PostalCodeDto.
+2021-04-23 11:12:32.764  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting a Member to a MemberDto, return a MemberDto.
+2021-04-23 11:12:32.764  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting an Address to an AddressDto, return a AddressDto.
+2021-04-23 11:12:32.764  INFO 7248 --- [http-nio-auto-2-exec-1] c.s.spaceshark.mappers.MemberMapper      : Converting PostalCode to a PostalCodeDto, return a PostalCodeDto.
+2021-04-23 11:12:35.196  INFO 7248 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-23 11:12:35.199  INFO 7248 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-23 11:12:35.201  INFO 7248 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2021-04-23 11:12:35.210  INFO 7248 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
