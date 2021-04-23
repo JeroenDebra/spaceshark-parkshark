@@ -59,8 +59,13 @@ class DivisionControllerTest {
         createDivisionDTO.setDirector_firstname("firstName");
         createDivisionDTO.setDirector_lastname("lastName");
 
+        HttpHeaders header = new HttpHeaders();
+        header.set("userId","1");
+
+        HttpEntity<CreateDivisionDTO> request = new HttpEntity<>(createDivisionDTO, header);
+
         ResponseEntity<DivisionDTO> responseEntity = this.testRestTemplate
-                .postForEntity("http://localhost:" + port + "/divisions", createDivisionDTO, DivisionDTO.class);
+                .postForEntity("http://localhost:" + port + "/divisions", request, DivisionDTO.class);
 
         assertEquals(HttpStatus.BAD_REQUEST, responseEntity.getStatusCode());
     }

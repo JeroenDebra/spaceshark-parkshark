@@ -44,7 +44,7 @@ public class ParkingSpotController {
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public List<ParkingSpotDTO> getAllParkingSpots(@RequestParam Integer limit, @RequestHeader(value = "userId", required = false) String userId) {
+    public List<ParkingSpotDTO> getAllParkingSpots(@RequestParam(required = false) Integer limit, @RequestHeader(value = "userId", required = false) String userId) {
         authorizationService.throwExceptionIfNotManager(userId);
         logger.info("Getting all the parking spots");
         return parkingSpotMapper.parkingSpotListToParkingSpotDTOList(parkingSpotService.getAllParkingSpots(limit));
