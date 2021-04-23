@@ -1,5 +1,6 @@
 package com.switchfully.spaceshark.controllers;
 
+import com.switchfully.spaceshark.dtos.divisions.CreateDivisionDTO;
 import com.switchfully.spaceshark.dtos.parkinglots.CreateParkingSpotDTO;
 import com.switchfully.spaceshark.dtos.parkinglots.ParkingSpotDTO;
 import com.switchfully.spaceshark.mappers.ParkingSpotMapper;
@@ -19,6 +20,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.annotation.DirtiesContext;
@@ -58,6 +61,7 @@ public class ParkingSpotControllerTest {
                         new PostalCode("3000", "Leuven")));
         parkinglotService.save(parkinglot);
 
+
         Member member = new Member("name", "last name",
                 new Address("street name", " 13", new PostalCode("3000", "Leuven")),
                 "+12345678615", "test2@test.com", "DC 12 456");
@@ -70,8 +74,13 @@ public class ParkingSpotControllerTest {
         createParkingSpotDTO.setStartTime(LocalDateTime.of(2021, 3, 20, 10,55));
         createParkingSpotDTO.setLicensePlate("DC 12 456");
 
+        HttpHeaders header = new HttpHeaders();
+        header.set("userId", "" + member.getId());
+
+        HttpEntity<CreateParkingSpotDTO> request = new HttpEntity<>(createParkingSpotDTO, header);
+
         ResponseEntity<ParkingSpotDTO> responseEntity = this.testRestTemplate
-                .postForEntity("http://localhost:" + port + "/parkingspots", createParkingSpotDTO, ParkingSpotDTO.class);
+                .postForEntity("http://localhost:" + port + "/parkingspots", request, ParkingSpotDTO.class);
 
         assertEquals(HttpStatus.CREATED, responseEntity.getStatusCode());
         assertNotEquals(responseEntity.getBody(), null);
