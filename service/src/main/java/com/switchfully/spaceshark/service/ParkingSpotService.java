@@ -52,6 +52,7 @@ public class ParkingSpotService {
     }
 
     public List<ParkingSpot> getAllParkingSpots() {
-        return parkingSpotRepository.findAll();
+        return parkingSpotRepository.getParkingSpotsByIdIsGreaterThanOrderByStartTimeAsc(0);
     }
+
 }
