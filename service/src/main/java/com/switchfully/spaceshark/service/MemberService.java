@@ -37,6 +37,8 @@ public class MemberService {
         return optionalMember.orElseThrow(() -> new IllegalArgumentException("member with id " + id + " could not be found."));
     }
 
-
+    public boolean memberExistsWithId(int id){
+        return memberRepository.findById(id).isPresent();
+    }
 
 }

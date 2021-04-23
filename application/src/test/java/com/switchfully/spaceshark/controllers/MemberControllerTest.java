@@ -4,6 +4,7 @@ import com.switchfully.spaceshark.dtos.addresses.CreateAddressDTO;
 import com.switchfully.spaceshark.dtos.members.CreateMemberDto;
 import com.switchfully.spaceshark.dtos.members.MemberDto;
 import com.switchfully.spaceshark.dtos.members.OverviewMemberDTO;
+import com.switchfully.spaceshark.dtos.parkinglots.OverviewParkinglotDTO;
 import com.switchfully.spaceshark.dtos.postalcodes.CreatePostalCodeDTO;
 import com.switchfully.spaceshark.mappers.MemberMapper;
 import com.switchfully.spaceshark.service.MemberService;
@@ -12,8 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.test.annotation.DirtiesContext;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -112,8 +112,13 @@ class MemberControllerTest {
 
         memberService.save(memberMapper.createMemberDtoToMember(createMemberDto));
 
+        HttpHeaders header = new HttpHeaders();
+        header.set("userId","1");
+        HttpEntity<String> request = new HttpEntity<>(header);
+
         ResponseEntity<OverviewMemberDTO[]> responseEntity = this.testRestTemplate
-                .getForEntity("http://localhost:" + port + "/members", OverviewMemberDTO[].class);
+        .exchange("http://localhost:" + port + "/members", HttpMethod.GET, request, OverviewMemberDTO[].class);
+
 
         assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
         assertEquals(sizeBeforeAdding + 1, memberService.getAllMembers().size());
